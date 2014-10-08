@@ -36,6 +36,7 @@ function wpmtst_guide() {
 		?>
 	</div>
 	<?php
+logmem();
 }
 
 

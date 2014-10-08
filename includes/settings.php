@@ -37,6 +37,7 @@ function wpmtst_settings_menu() {
 										'wpmtst_guide' );
 										
 	add_action( 'admin_init', 'wpmtst_register_settings' );
+logmem();
 }
 add_action( 'admin_menu', 'wpmtst_settings_menu' );
 
@@ -70,6 +71,7 @@ function wpmtst_unique_menu_title() {
 			$menu[$key][0] = 'Strong Testimonials';
 		}
 	}
+logmem();
 }
 add_action( 'admin_menu', 'wpmtst_unique_menu_title', 100 );
 
@@ -80,6 +82,7 @@ add_action( 'admin_menu', 'wpmtst_unique_menu_title', 100 );
 function wpmtst_register_settings() {
 	register_setting( 'wpmtst-settings-group', 'wpmtst_options', 'wpmtst_sanitize_options' );
 	register_setting( 'wpmtst-cycle-group', 'wpmtst_cycle', 'wpmtst_sanitize_cycle' );
+logmem();
 }
 
 
@@ -95,6 +98,7 @@ function wpmtst_sanitize_options( $input ) {
 	$input['load_page_style']   = isset( $input['load_page_style'] ) ? 1 : 0;
 	$input['load_widget_style'] = isset( $input['load_widget_style'] ) ? 1 : 0;
 	$input['load_form_style']   = isset( $input['load_form_style'] ) ? 1 : 0;
+logmem();
 	return $input;
 }
 
@@ -122,6 +126,7 @@ function wpmtst_sanitize_cycle( $input ) {
 	$input['speed']      = (float) sanitize_text_field( $input['speed'] );
 	$input['pause']      = isset( $input['pause'] ) ? 1 : 0;
 	
+logmem();
 	return $input;
 }
 
@@ -174,6 +179,7 @@ function wpmtst_settings_page() {
 	</div><!-- wrap -->
 
 	<?php
+logmem();
 }
 
 
@@ -233,6 +239,7 @@ function wpmtst_settings_section() {
 	}
 	
 	include( WPMTST_INC . 'form-general-settings.php' );
+logmem();
 }
 
 
@@ -257,6 +264,7 @@ function wpmtst_client_section() {
 	}
 	
 	include( WPMTST_INC . 'form-client-settings.php' );
+logmem();
 }
 
 
@@ -287,6 +295,7 @@ function wpmtst_cycle_section() {
 	) );
 	
 	include( WPMTST_INC . 'form-cycle-settings.php' );
+logmem();
 }
 
 
@@ -375,6 +384,7 @@ function wpmtst_settings_shortcodes() {
 
 	</div><!-- wrap -->
 	<?php
+logmem();
 }
 
 
@@ -396,6 +406,7 @@ function wpmtst_restore_default_template_script() {
 	});
 	</script>
 	<?php
+logmem();
 }
 add_action( 'admin_footer', 'wpmtst_restore_default_template_script' );
 
@@ -407,6 +418,7 @@ function wpmtst_restore_default_template_function() {
 	$options = get_option( 'wpmtst_options' );
 	$template = $options['default_template'];
 	echo $template;
+logmem();
 	die();
 }
 add_action( 'wp_ajax_wpmtst_restore_default_template', 'wpmtst_restore_default_template_function' );

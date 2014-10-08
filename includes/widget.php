@@ -190,6 +190,7 @@ class WpmTst_Widget extends WP_Widget {
 			echo sprintf( $format, get_permalink( $data['more_page'] ) );
 
 		echo $data['after_widget'];
+logmem();
 	}
 
 	// ----
@@ -418,6 +419,7 @@ class WpmTst_Widget extends WP_Widget {
 
 		</div><!-- wpmtst-widget -->
 		<?php
+logmem();
 	}
 
 	// ----
@@ -483,6 +485,7 @@ class WpmTst_Widget extends WP_Widget {
 		$instance['more']      = $new_instance['more'];
 		$instance['more_page'] = strip_tags( $new_instance['more_page'] );
 		
+logmem();
 		return $instance;
 	}
 

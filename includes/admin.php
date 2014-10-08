@@ -14,6 +14,7 @@ function wpmtst_admin_init() {
 	wpmtst_default_settings();
 	// Remove ad banner from Captcha by BestWebSoft plugin
 	remove_action( 'admin_notices', 'cptch_plugin_banner' );
+logmem();
 }
 add_action( 'admin_init', 'wpmtst_admin_init' );
 
@@ -45,6 +46,7 @@ function wpmtst_admin_scripts( $hook ) {
 		wp_enqueue_script( 'wpmtst-admin-script', WPMTST_DIR . 'js/wpmtst-admin.js', array( 'jquery' ) );
 		wp_localize_script( 'wpmtst-admin-script', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	}
+logmem();
 }
 add_action( 'admin_enqueue_scripts', 'wpmtst_admin_scripts' );
 
@@ -54,6 +56,7 @@ add_action( 'admin_enqueue_scripts', 'wpmtst_admin_scripts' );
  */
 function wpmtst_add_meta_boxes() {
 	add_meta_box( 'details', __( 'Client Details', 'strong-testimonials' ), 'wpmtst_meta_options', 'wpm-testimonial', 'normal', 'core' );
+logmem();
 }
 add_action( 'add_meta_boxes_wpm-testimonial', 'wpmtst_add_meta_boxes' );
 
@@ -75,6 +78,7 @@ function wpmtst_reorder_meta_boxes() {
 		
 	if ( $newcore ) 
 		$wp_meta_boxes['wpm-testimonial']['normal']['core'] = $newcore;
+logmem();
 }
 add_action( 'do_meta_boxes', 'wpmtst_reorder_meta_boxes' );
 
@@ -103,6 +107,7 @@ function wpmtst_meta_options() {
 		<?php } ?>
 	</table>
 	<?php
+logmem();
 }
 
 
@@ -134,6 +139,7 @@ function wpmtst_edit_columns( $columns ) {
 	$columns['shortcode'] = __( 'Shortcode', 'strong-testimonials' );
 	$columns['date']      = __( 'Date', 'strong-testimonials' );
 
+logmem();
 	return $columns;
 }
 add_filter( 'manage_edit-wpm-testimonial_columns', 'wpmtst_edit_columns' );
@@ -176,6 +182,7 @@ function wpmtst_custom_columns( $column ) {
 		if ( isset( $custom[$column] ) )
 			echo $custom[$column][0];
 	}
+logmem();
 }
 add_action( 'manage_wpm-testimonial_posts_custom_column', 'wpmtst_custom_columns' );
 
@@ -185,6 +192,7 @@ add_action( 'manage_wpm-testimonial_posts_custom_column', 'wpmtst_custom_columns
  */
 function wpmtst_add_thumbnail_column( $columns ) {
 	$columns['thumbnail'] = __( 'Thumbnail', 'strong-testimonials' );
+logmem();
 	return $columns;
 }
 add_filter( 'manage_wpm-testimonial_posts_columns', 'wpmtst_add_thumbnail_column' );
@@ -215,6 +223,7 @@ function wpmtst_add_thumbnail_value( $column_name, $post_id ) {
 		else
 			echo __( 'None', 'strong-testimonials' );
 	}
+logmem();
 }
 add_action( 'manage_wpm-testimonial_posts_custom_column', 'wpmtst_add_thumbnail_value', 10, 2 );
 
@@ -231,6 +240,7 @@ function wpmtst_manage_categories( $columns ) {
 			'shortcode' => __( 'Shortcode', 'strong-testimonials' ),
 			'posts'     => __( 'Posts' )
 	);
+logmem();
 	return $new_columns;
 }
 add_filter( 'manage_edit-wpm-testimonial-category_columns', 'wpmtst_manage_categories');
@@ -247,6 +257,7 @@ function wpmtst_manage_columns( $out, $column_name, $id ) {
 	else
 		$output = '';
 
+logmem();
 	return $output;
 }
 add_filter( 'manage_wpm-testimonial-category_custom_column', 'wpmtst_manage_columns', 10, 3 );
@@ -268,6 +279,7 @@ function wpmtst_save_details() {
 			update_post_meta( $post->ID, $key, $value );
 		}
 	}
+logmem();
 }
 // add_action( 'save_post_wpm-testimonial', 'wpmtst_save_details' ); // WP 3.7+
 add_action( 'save_post', 'wpmtst_save_details' );

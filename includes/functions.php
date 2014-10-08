@@ -16,6 +16,7 @@ function wpmtst_truncate( $content, $limit ) {
 		if ( $space_pos )
 			$content = substr( $content, 0, $space_pos ) . ' . . . ';
 	}
+logmem();
 	return $content;
 }
 
@@ -43,6 +44,7 @@ function wpmtst_get_post( $post ) {
 				$post->$name = '';
 		}
 	}
+logmem();
 	return $post;
 }
 
@@ -60,6 +62,7 @@ function wpmtst_get_terms( $category ) {
 		$term_taxonomy = '';
 		$term_slug     = '';
 	}
+logmem();
 	return array( 'taxo' => $term_taxonomy, 'term' => $term_slug );
 }
 
@@ -71,6 +74,7 @@ function wpmtst_get_website( $url ) {
 	if ( ! preg_match( "~^(?:f|ht)tps?://~i", $url ) )
 		$url = 'http://' . $url;
 
+logmem();
 	return $url;
 }
 
@@ -98,6 +102,7 @@ function wpmtst_is_queued( $filenames ) {
 			return true;
 		}
 	}
+logmem();
 	return false;
 }
 
@@ -154,6 +159,7 @@ function wpmtst_cycle_check( $effect, $speed, $timeout, $pause, $var ) {
 	wp_enqueue_script( 'wpmtst-cycle-script', WPMTST_DIR . 'js/wpmtst-cycle.js', array ( 'jquery' ), false, true );
 	wp_localize_script( 'wpmtst-cycle-script', $var, $args );
 	
+logmem();
 }
 // custom hook
 add_action( 'wpmtst_cycle_hook', 'wpmtst_cycle_check', 10, 5 );

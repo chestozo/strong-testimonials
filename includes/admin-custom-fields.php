@@ -119,6 +119,7 @@ function wpmtst_settings_custom_fields() {
 	
 	echo '</form><!-- Custom Fields -->' . "\n";
 	echo '</div><!-- wrap -->' . "\n";
+logmem();
 }
 
 
@@ -280,6 +281,7 @@ function wpmtst_show_field( $key, $field, $adding ) {
 	
 	$html .= '</div><!-- .custom-field -->' . "\n";
 	
+logmem();
 	return $html;
 }
 
@@ -337,6 +339,7 @@ function wpmtst_show_field_secondary( $key, $field ) {
 	$html .= '<td><input type="text" name="fields[' . $key . '][after]" value="' . $field['after'] . '" /></td>' . "\n";
 	$html .= '</td>' . "\n";
 	
+logmem();
 	return $html;
 }
 
@@ -360,6 +363,7 @@ function wpmtst_show_field_admin_table( $key, $field ) {
 	}
 	$html .= '</td>' . "\n";
 	
+logmem();
 	return $html;
 }
 
@@ -381,6 +385,7 @@ function wpmtst_show_field_hidden( $key, $field ) {
 		$html .= '<input type="hidden" name="fields[' . $key . '][core]" value="' . $field['core'] . '">' . "\n";
 	}
 	
+logmem();
 	return $html;
 }
 
@@ -395,6 +400,7 @@ function wpmtst_add_field_function() {
 	$empty_field = array( 'record_type' => 'custom', 'label' => 'New Field' );
 	$new_field = wpmtst_show_field( $new_key, $empty_field, true );
 	echo $new_field;
+logmem();
 	die();
 }
 add_action( 'wp_ajax_wpmtst_add_field', 'wpmtst_add_field_function' );
@@ -414,6 +420,7 @@ function wpmtst_add_field_2_function() {
 	);
 	$new_field = wpmtst_show_field_secondary( $new_key, $empty_field );
 	echo $new_field;
+logmem();
 	die();
 }
 add_action( 'wp_ajax_wpmtst_add_field_2', 'wpmtst_add_field_2_function' );
@@ -433,6 +440,7 @@ function wpmtst_add_field_3_function() {
 	);
 	$new_field = wpmtst_show_field_hidden( $new_key, $empty_field );
 	echo $new_field;
+logmem();
 	die();
 }
 add_action( 'wp_ajax_wpmtst_add_field_3', 'wpmtst_add_field_3_function' );
@@ -452,6 +460,7 @@ function wpmtst_add_field_4_function() {
 	);
 	$new_field = wpmtst_show_field_admin_table( $new_key, $empty_field );
 	echo $new_field;
+logmem();
 	die();
 }
 add_action( 'wp_ajax_wpmtst_add_field_4', 'wpmtst_add_field_4_function' );

@@ -276,6 +276,7 @@ function wpmtst_form_shortcode( $atts ) {
 	$html .= '</form>';
 	$html .= '</div><!-- wpmtst-form -->';
 
+logmem();
 	return $html;
 }
 add_shortcode( 'wpmtst-form', 'wpmtst_form_shortcode' );
@@ -287,6 +288,7 @@ function wpmtst_honeypot_before() {
 		do_action( 'honeypot_before_spam_testimonial', $_POST );
 		die( __( 'There was a problem processing your testimonial.', 'strong-testimonials' ) );
 	}
+logmem();
 	return;
 }
 
@@ -296,6 +298,7 @@ function wpmtst_honeypot_after() {
 		do_action( 'honeypot_after_spam_testimonial', $_POST );
 		die( __( 'There was a problem processing your testimonial.', 'strong-testimonials' ) );
 	}
+logmem();
 	return;
 }
 

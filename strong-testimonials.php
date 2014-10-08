@@ -29,7 +29,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-
 /**
  * Setup
  */
@@ -56,6 +55,7 @@ add_filter( 'plugin_action_links', 'wpmtst_plugin_action_links', 10, 2 );
  */
 function wpmtst_textdomain() {
 	$success = load_plugin_textdomain( 'strong-testimonials', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+logmem();
 }
 add_action( 'plugins_loaded', 'wpmtst_textdomain' );
 
@@ -69,6 +69,7 @@ register_deactivation_hook( __FILE__, 'wpmtst_flush_rewrite_rules' );
 
 function wpmtst_flush_rewrite_rules() {
 	flush_rewrite_rules();
+logmem();
 }
 
 
@@ -163,6 +164,7 @@ function wpmtst_default_settings() {
 		$cycle = array_merge( $default_cycle, $cycle );
 		update_option( 'wpmtst_cycle', $cycle );
 	}
+logmem();
 }
 
 
@@ -185,6 +187,7 @@ function wpmtst_version_check() {
 			wp_die( $message );
 		}
 	}
+logmem();
 }
 
 
@@ -256,6 +259,7 @@ function wpmtst_register_cpt() {
 			)
 	) );
 
+logmem();
 }
 // add_action( 'init', 'wpmtst_register_cpt' );
 add_action( 'init', 'wpmtst_register_cpt', 5 );
@@ -266,6 +270,7 @@ add_action( 'init', 'wpmtst_register_cpt', 5 );
  */
 function wpmtst_theme_support() {
 	add_theme_support( 'post-thumbnails', array( 'wpm-testimonial' ) );
+logmem();
 }
 add_action( 'after_theme_setup', 'wpmtst_theme_support' );
 
@@ -333,6 +338,7 @@ function wpmtst_scripts() {
 		}
 
 	}
+logmem();
 }
 add_action( 'wp_enqueue_scripts', 'wpmtst_scripts' );
 
@@ -340,13 +346,17 @@ add_action( 'wp_enqueue_scripts', 'wpmtst_scripts' );
 /*
  * Includes
  */
+// include( WPMTST_INC . 'shims.php' );
 include( WPMTST_INC . 'functions.php' );
-include( WPMTST_INC . 'shims.php' );
-include( WPMTST_INC . 'admin.php' );
 include( WPMTST_INC . 'settings.php' );
-include( WPMTST_INC . 'guide.php' );
-include( WPMTST_INC . 'shortcodes.php' );
-include( WPMTST_INC . 'shortcode-form.php' );
 include( WPMTST_INC . 'widget.php' );
-include( WPMTST_INC . 'admin-custom-fields.php' );
-include( WPMTST_INC . 'captcha.php' );
+if ( is_admin() ) {
+	include( WPMTST_INC . 'admin.php' );
+	include( WPMTST_INC . 'guide.php' );
+	include( WPMTST_INC . 'admin-custom-fields.php' );
+}
+else {
+	include( WPMTST_INC . 'shortcodes.php' );
+	include( WPMTST_INC . 'shortcode-form.php' );
+	include( WPMTST_INC . 'captcha.php' );
+}

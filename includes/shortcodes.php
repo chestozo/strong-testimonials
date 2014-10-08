@@ -18,6 +18,7 @@ if ( ! function_exists( 'normalize_empty_atts' ) ) {
 					unset( $atts[ $attribute ] );
 				}
 			}
+logmem();
 			return $atts;
 		}
 	}
@@ -63,6 +64,7 @@ function wpmtst_single( $post, $args = array( 'title' => 1, 'images' => 1, 'cont
 	$html .= '</div><!-- testimonial -->';
 	
 	// render other shortcodes in content; client_info shortcodes too
+logmem();
 	return do_shortcode( $html );
 }
 
@@ -132,6 +134,7 @@ function wpmtst_client_info( $post ) {
 		}
 	}
 	// return do_shortcode( $html );
+logmem();
 	return $html;
 }
 
@@ -151,6 +154,7 @@ function wpmtst_text_shortcode( $atts, $content = null ) {
 		),
 		normalize_empty_atts( $atts )
 	) );
+logmem();
 	return '<div class="' . $class . '">' . $content . '</div>';
 }
 add_shortcode( 'wpmtst-text', 'wpmtst_text_shortcode' );
@@ -182,6 +186,7 @@ function wpmtst_link_shortcode( $atts, $content = null ) {
 		$text = preg_replace( "(^https?://)", "", $url );
 		
 	// if no url, return text_shortcode instead
+logmem();
 	if ( $url )
 		return '<div class="' . $class . '"><a href="' . $url . '"'. ( $new_tab ? ' target="_blank"' : '' ) .'>' . $text . '</a></div>';
 	else
@@ -202,6 +207,7 @@ function wpmtst_single_shortcode( $atts ) {
 	$display = '<div id="wpmtst-container">';
 	$display .= wpmtst_single( $post );
 	$display .= '</div>';
+logmem();
 	return $display;
 }
 add_shortcode( 'wpmtst-single', 'wpmtst_single_shortcode' );
@@ -237,6 +243,7 @@ function wpmtst_random_shortcode( $atts ) {
 		$display .= wpmtst_single( wpmtst_get_post( $post ) );
 	}
 	$display .= '</div>';
+logmem();
 	return $display;
 }
 add_shortcode( 'wpmtst-random', 'wpmtst_random_shortcode' );
@@ -277,6 +284,7 @@ function wpmtst_all_shortcode( $atts ) {
 	}
 	$display .= '</div><!-- wpmtst-container -->';
 
+logmem();
 	return $display;
 }
 add_shortcode( 'wpmtst-all', 'wpmtst_all_shortcode' );
@@ -334,6 +342,7 @@ function wpmtst_cycle_shortcode( $atts ) {
 	}
 	$display .= '</div><!-- #wpmtst-container -->';
 
+logmem();
 	return $display;
 }
 add_shortcode( 'wpmtst-cycle', 'wpmtst_cycle_shortcode' );
@@ -348,6 +357,7 @@ function wpmtst_wp_handle_upload( $file_handler, $overrides ) {
   require_once( ABSPATH . 'wp-admin/includes/media.php' );
 
 	$upload = wp_handle_upload( $file_handler, $overrides );
+logmem();
 	return $upload ;
 }
 
@@ -398,4 +408,5 @@ function wpmtst_notify_admin() {
 		// More info here? A copy of testimonial? A link to admin page? A link to approve directly from email?
 		wp_mail( $admin_email, $subject, $message, $headers );
 	}
+logmem();
 }
