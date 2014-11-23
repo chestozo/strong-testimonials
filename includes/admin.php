@@ -70,7 +70,7 @@ add_action( 'admin_enqueue_scripts', 'wpmtst_admin_scripts' );
  * Add meta box to the post editor screen and place above Custom Fields
  */
 function wpmtst_add_meta_boxes() {
-	add_meta_box( 'details', __( 'Client Details', 'strong-testimonials' ), 'wpmtst_meta_options', 'wpm-testimonial', 'normal', 'core' );
+	add_meta_box( 'details', _x( 'Client Details', 'post editor', 'strong-testimonials' ), 'wpmtst_meta_options', 'wpm-testimonial', 'normal', 'core' );
 }
 add_action( 'add_meta_boxes_wpm-testimonial', 'wpmtst_add_meta_boxes' );
 
@@ -108,7 +108,7 @@ function wpmtst_meta_options() {
 	?>
 	<table class="options">
 		<tr>
-			<td colspan="2"><?php _e( 'To add a client&apos;s photo, use the Featured Image option.', 'strong-testimonials' ); ?>&nbsp;<div class="dashicons dashicons-arrow-right-alt"></div></td>
+			<td colspan="2"><?php _ex( 'To add a client\'s photo, use the Featured Image option.', 'post editor', 'strong-testimonials' ); ?>&nbsp;<div class="dashicons dashicons-arrow-right-alt"></div></td>
 		</tr>
 		<?php foreach ( $field_groups[ $fields['current_field_group'] ]['fields'] as $key => $field ) : ?>
 		<?php if ( 'custom' == $field['record_type'] ) : ?>
@@ -257,9 +257,9 @@ function wpmtst_manage_categories( $columns ) {
 			'cb'        => '<input type="checkbox" />',
 			'ID'        => __( 'ID', 'strong-testimonials' ),
 			'name'      => __( 'Name', 'strong-testimonials' ),
-			'slug'      => __( 'Slug' ),
+			'slug'      => __( 'Slug', 'strong-testimonials' ),
 			'shortcode' => __( 'Shortcode', 'strong-testimonials' ),
-			'posts'     => __( 'Posts' )
+			'posts'     => __( 'Posts', 'strong-testimonials' )
 	);
 	return $new_columns;
 }

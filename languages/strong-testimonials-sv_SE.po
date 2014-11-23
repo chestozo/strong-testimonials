@@ -1,277 +1,332 @@
-# Copyright (C) 2014 Strong Testimonials
-# This file is distributed under the same license as the Strong Testimonials package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Strong Testimonials 1.12\n"
+"Project-Id-Version: Strong Testimonials v1.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/strong-testimonials\n"
-"POT-Creation-Date: 2014-11-24 04:43:34+00:00\n"
+"POT-Creation-Date: 2014-10-23 00:34:15+00:00\n"
+"PO-Revision-Date: 2014-11-06 21:18+0100\n"
+"Last-Translator: Tom Stone <dev@tomstone.se>\n"
+"Language-Team:  <info@tomstone.se>\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../includes\n"
 
+# @ default
 #: includes/admin-custom-fields.php:12 includes/settings.php:136
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "Du har ej tillräckliga rättigheter att tillgå denna sida."
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:32
 msgid "Changes undone."
-msgstr ""
+msgstr "Ändringarna har återställts."
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:49
 msgid "Defaults restored."
-msgstr ""
+msgstr "Återställt inställningar"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:75
 msgid "Fields saved."
-msgstr ""
+msgstr "Fälten har sparats"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:90 includes/guide-advanced.php:12
 msgid "Fields"
-msgstr ""
+msgstr "Fält"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:111
 msgid "Add New Field"
-msgstr ""
+msgstr "Skapa nytt fält"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:116
 msgid "Undo Changes"
-msgstr ""
+msgstr "Återställ ändringar"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:117
 msgid "Restore Defaults"
-msgstr ""
+msgstr "Återställ inställningar"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:153
 msgid "This appears on the form."
-msgstr ""
+msgstr "Detta visas på formuläret"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:166
 msgid "Use only lowercase letters, numbers, and underscores."
-msgstr ""
+msgstr "Använd endast gemena bokstäver, nummer och understrykningsstreck."
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:210
 msgid "Post Fields"
-msgstr ""
+msgstr "Postfält"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:217
 msgid "Custom Fields"
-msgstr ""
+msgstr "Anpassade fält"
 
+# @ default
 #: includes/admin-custom-fields.php:276
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:278
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:302
 msgid "Required"
-msgstr ""
+msgstr "Obligatoriskt"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:319
 msgid "Placeholder"
-msgstr ""
+msgstr "Platshållare"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:328 includes/form-general-settings.php:66
 msgid "Before"
-msgstr ""
+msgstr "Före"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:336 includes/form-general-settings.php:71
 msgid "After"
-msgstr ""
+msgstr "Efter"
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:352
 msgid "Admin Table"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/admin-custom-fields.php:358
 msgid "required"
-msgstr ""
+msgstr "obligatoriskt"
 
+# @ strong-testimonials
 #: includes/admin.php:58
-msgctxt "post editor"
 msgid "Client Details"
-msgstr ""
+msgstr "Gästdetaljer"
 
+# @ strong-testimonials
 #: includes/admin.php:96
-msgctxt "post editor"
-msgid "To add a client's photo, use the Featured Image option."
-msgstr ""
+msgid "To add a client&apos;s photo, use the Featured Image option."
+msgstr "För att lägga till gästens foto, använd 'utvald bild'."
 
-#: includes/admin.php:133
-msgctxt "admin list"
+# @ strong-testimonials
+#: includes/admin.php:133 includes/form-cycle-settings.php:73
+#: includes/widget.php:234 includes/widget.php:377
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
-#: includes/admin.php:134
-msgctxt "admin list"
+# @ strong-testimonials
+#: includes/admin.php:134 includes/form-cycle-settings.php:85
+#: includes/widget.php:348
 msgid "Excerpt"
-msgstr ""
+msgstr "Utdrag"
 
-#: includes/admin.php:140
+# @ strong-testimonials
+#: includes/admin.php:140 includes/admin.php:201
 msgid "Thumbnail"
-msgstr ""
+msgstr "Miniatyrbild"
 
-#: includes/admin.php:147
-msgctxt "admin list"
+# @ strong-testimonials
+#: includes/admin.php:147 includes/form-cycle-settings.php:12
+#: includes/widget.php:240
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
-#: includes/admin.php:148
-msgctxt "admin list"
+# @ strong-testimonials
+#: includes/admin.php:148 includes/admin.php:245
 msgid "Shortcode"
-msgstr ""
+msgstr "Shortcode"
 
+# @ strong-testimonials
 #: includes/admin.php:149
-msgctxt "admin list"
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
-#: includes/admin.php:202
-msgctxt "admin list"
-msgid "Thumbnail"
-msgstr ""
-
-#: includes/admin.php:231
-msgctxt "noun"
+# @ strong-testimonials
+#: includes/admin.php:230 includes/form-cycle-settings.php:140
+#: includes/widget.php:409
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
-#: includes/admin.php:243
+# @ strong-testimonials
+#: includes/admin.php:242
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
-#: includes/admin.php:244
+# @ strong-testimonials
+#: includes/admin.php:243
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
-#: includes/admin.php:245
+# @ default
+#: includes/admin.php:244
 msgid "Slug"
-msgstr ""
+msgstr "Slugg"
 
+# @ default
 #: includes/admin.php:246
-msgid "Shortcode"
-msgstr ""
-
-#: includes/admin.php:247
 msgid "Posts"
-msgstr ""
+msgstr "Poster"
 
+# @ strong-testimonials
 #: includes/captcha.php:39
 msgid "Input this code:"
-msgstr ""
+msgstr "Mata in denna kod"
 
+# @ strong-testimonials
 #: includes/captcha.php:64 includes/captcha.php:73
 msgid "Please complete the CAPTCHA."
-msgstr ""
+msgstr "Vänligen skriv in CAPTCHA."
 
+# @ strong-testimonials
 #: includes/captcha.php:85
 msgid "Invalid keys. Please contact the site administrator."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/captcha.php:86
 msgid "Invalid parameter. Please contact the site administrator."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/captcha.php:87 includes/captcha.php:104
 msgid "The CAPTCHA was not entered correctly. Please try again."
-msgstr ""
+msgstr "CAPTCHA matades inte in korrekt. Försök igen."
 
+# @ strong-testimonials
 #: includes/captcha.php:88
 msgid "The process timed out. Please try again."
-msgstr ""
+msgstr "Tiden för processen löpte ut. Försök igen."
 
+# @ strong-testimonials
 #: includes/defaults.php:65
 msgid "This field is required."
-msgstr ""
+msgstr "Detta fält är obligatoriskt."
 
+# @ strong-testimonials
 #: includes/defaults.php:77
 msgid "Testimonial Title"
-msgstr ""
+msgstr "Titel Vitsord"
 
+# @ strong-testimonials
 #: includes/defaults.php:84
 msgid "Testimonial Content"
-msgstr ""
+msgstr "Vitsord innehåll"
 
+# @ strong-testimonials
 #: includes/defaults.php:92
 msgid "Featured Image"
-msgstr ""
+msgstr "Utvald bild"
 
+# @ strong-testimonials
 #: includes/defaults.php:122
 msgid "Default Field Group"
-msgstr ""
+msgstr "Standard fältgrupp"
 
+# @ strong-testimonials
 #: includes/defaults.php:130
 msgid "Full Name"
-msgstr ""
+msgstr "För- & efternamn:"
 
+# @ strong-testimonials
 #: includes/defaults.php:133
 msgid "What is your full name?"
-msgstr ""
+msgstr "Vad är ditt för- & efternamn?"
 
+# @ strong-testimonials
 #: includes/defaults.php:139
 msgid "Email"
-msgstr ""
+msgstr "E-post"
 
+# @ strong-testimonials
 #: includes/defaults.php:142
 msgid "What is your email address?"
-msgstr ""
+msgstr "Skriv din emailadress"
 
+# @ strong-testimonials
 #: includes/defaults.php:147
 msgid "Company Name"
-msgstr ""
+msgstr "Företagsnamn"
 
+# @ strong-testimonials
 #: includes/defaults.php:149
 msgid "What is your company name?"
-msgstr ""
+msgstr "Vilket är ditt företagsnamn?"
 
+# @ strong-testimonials
 #: includes/defaults.php:154
 msgid "Company Website"
-msgstr ""
+msgstr "Företagets hemsida"
 
+# @ strong-testimonials
 #: includes/defaults.php:156
 msgid "Does your company have a website?"
-msgstr ""
+msgstr "Har ditt företag en hemsida?"
 
+# @ strong-testimonials
 #: includes/defaults.php:164
 msgid "Heading"
-msgstr ""
+msgstr "Rubrik"
 
+# @ strong-testimonials
 #: includes/defaults.php:167
 msgid "A headline for your testimonial."
-msgstr ""
+msgstr "En rubrik för ditt vitsord."
 
+# @ strong-testimonials
 #: includes/defaults.php:172
 msgid "Testimonial"
-msgstr ""
+msgstr "Vitsord"
 
+# @ strong-testimonials
 #: includes/defaults.php:175
 msgid "What do you think about us?"
-msgstr ""
+msgstr "Hur upplevde du besöket hos oss?"
 
+# @ strong-testimonials
 #: includes/defaults.php:180
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
+# @ strong-testimonials
 #: includes/defaults.php:182
 msgid "Would you like to include a photo?"
-msgstr ""
+msgstr "Inkludera gärna ett foto"
 
+# @ strong-testimonials
 #: includes/defaults.php:198
 msgid "Custom Field Group"
-msgstr ""
+msgstr "Anpassad fältgrupp"
 
 #: includes/form-client-settings.php:28
 msgid "Client section shortcodes:"
-msgstr ""
+msgstr "Gästsektionens shortcodes"
 
+# @ strong-testimonials
 #: includes/form-client-settings.php:30
 msgid "Your fields:"
-msgstr ""
+msgstr "Dina fält:"
 
 #: includes/form-client-settings.php:30
 msgid ""
@@ -284,219 +339,181 @@ msgid ""
 "Use these shortcodes to select which client fields appear below each "
 "testimonial."
 msgstr ""
+"Använd dessa shortcodes för att bestämma vilka klientfält som ska synas "
+"under vitsorden."
 
 #: includes/form-client-settings.php:32
 msgid "These shortcodes only work here, not on a page."
-msgstr ""
+msgstr "Dessa shortcodes funkar endast här, ej på en sida."
 
 #: includes/form-client-settings.php:46
 msgid "Default:"
-msgstr ""
+msgstr "Grundinställning"
 
 #: includes/form-client-settings.php:55
 msgid "Restore Default"
-msgstr ""
+msgstr "Återställ inställningar"
 
-#. translators: This is on the Cycle Shortcode settings screen.
+# @ strong-testimonials
 #: includes/form-cycle-settings.php:16
-msgctxt "selecting the category"
-msgid "Category"
-msgstr ""
-
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:25
-msgctxt "setting"
 msgid "All categories"
-msgstr ""
+msgstr "Alla kategorier"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:46
-msgctxt "selecting the display order"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:30 includes/widget.php:254
 msgid "Order"
 msgstr ""
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:66
-msgctxt "selecting the quantity to display"
+#: includes/form-cycle-settings.php:46
 msgid "How many?"
-msgstr ""
+msgstr "Hur många?"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:76
-msgctxt "setting: display all"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:52 includes/widget.php:292
 msgid "All"
-msgstr ""
+msgstr "Alla"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:95
-msgctxt "selecting display options"
+#: includes/form-cycle-settings.php:68 includes/widget.php:285
+#: includes/widget.php:330
 msgid "Show"
-msgstr ""
+msgstr "Visa"
 
-#. translators: This is on the Cycle Shortcode settings screen. "if included in
-#. Fields" refers to your custom fields.
-#: includes/form-cycle-settings.php:104
-msgctxt "the testimonial title"
-msgid "Title <em>(if included in Fields)</em>"
-msgstr ""
-
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:121 includes/widget.php:421
-msgctxt "the testimonial excerpt"
-msgid "Excerpt"
-msgstr ""
-
-#. translators: This is on the Cycle Shortcode settings screen.
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:73 includes/form-cycle-settings.php:116
 #: includes/form-cycle-settings.php:126
-msgctxt "setting description"
+msgid "(if included in Fields)"
+msgstr "(om inkluderade i fälten)"
+
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:87
 msgid "Excerpts are hand-crafted summaries of your testimonial."
 msgstr ""
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:131
-msgctxt "setting description"
+#: includes/form-cycle-settings.php:88
 msgid ""
 "You may need to enable them in the post editor like in this <a id=\"toggle-"
 "screen-options\" href=\"#\">screenshot</a>."
 msgstr ""
 
-#. translators: This is on the Cycle Shortcode settings screen. %s is a number
-#. input field.
-#: includes/form-cycle-settings.php:146
-msgctxt "testimonial content limit"
-msgid "Content up to %s characters"
-msgstr ""
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:96
+msgid "Content up to"
+msgstr "Innehåll fram till"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:152 includes/widget.php:448
-msgctxt "setting description"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:96
+msgid "characters"
+msgstr "tecken"
+
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:98 includes/widget.php:360
 msgid "Will break on a space and add an ellipsis."
 msgstr ""
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:162 includes/widget.php:459
-msgctxt "display the entire testimonial"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:103 includes/widget.php:366
 msgid "Entire content"
-msgstr ""
+msgstr "Hela innehållet"
 
-#. translators: This is on the Cycle Shortcode settings screen. "if included in
-#. Fields" refers to your custom fields.
-#: includes/form-cycle-settings.php:179
-msgctxt "display the testimonial thumbnail"
-msgid "Featured Images <em>(if included in Fields)</em>"
-msgstr ""
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:116 includes/guide-advanced.php:13
+#: includes/widget.php:386
+msgid "Featured Images"
+msgstr "Utvalda bilder"
 
-#. translators: This is on the Cycle Shortcode settings screen. "if included in
-#. Fields" refers to your custom fields.
-#: includes/form-cycle-settings.php:194
-msgctxt "display custom fields"
-msgid "Client Information <em>(if included in Fields)</em>"
-msgstr ""
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:126
+msgid "Client Information"
+msgstr "Gästinformation"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:206
-msgctxt "display a link"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:134
 msgid "\"Read more\" link"
-msgstr ""
+msgstr "\"Läs mer\"-länk"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:216 includes/widget.php:547
-msgctxt "no \"Read more\" link"
-msgid "None"
-msgstr ""
-
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:226 includes/widget.php:556
-msgctxt "the \"Read more\" link"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:146 includes/widget.php:413
 msgid "Link to the testimonial"
-msgstr ""
+msgstr "Länk till vitsordet"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:236 includes/widget.php:565
-msgctxt "the \"Read more\" link"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:152 includes/widget.php:417
 msgid "Link to"
-msgstr ""
+msgstr "Länk till"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:243 includes/widget.php:572
-msgctxt "the 'Read more' link"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:155 includes/widget.php:419
 msgid "— Select a page —"
-msgstr ""
+msgstr "— Välj en sida —"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:260
-msgctxt "testimonial slideshow effect"
+#: includes/form-cycle-settings.php:168
 msgid "Transition"
-msgstr ""
+msgstr "Övergång"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:270
-msgctxt "testimonial slideshow"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:174 includes/widget.php:298
 msgid "Show each for"
-msgstr ""
+msgstr "Visa varje för"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#. translators: This appears in widget settings.
-#: includes/form-cycle-settings.php:278 includes/form-cycle-settings.php:299
-#: includes/widget.php:353 includes/widget.php:371
-msgctxt "time setting"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:178 includes/form-cycle-settings.php:191
+#: includes/widget.php:302 includes/widget.php:312
 msgid "seconds"
-msgstr ""
+msgstr "sekunder"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:291
-msgctxt "testimonial slideshow"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:187 includes/widget.php:308
 msgid "Effect duration"
-msgstr ""
+msgstr "Tidslängd effekt"
 
-#. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:310
-msgctxt "testimonial slideshow"
+# @ strong-testimonials
+#: includes/form-cycle-settings.php:198 includes/widget.php:319
 msgid "Pause on hover"
-msgstr ""
+msgstr "Pausa vid Hover"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:14
 msgid "Load stylesheets"
-msgstr ""
+msgstr "Ladda in stilmallar"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:20
 msgid "Pages"
-msgstr ""
+msgstr "Sidor"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:26
 msgid "Widget"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:32 includes/settings-shortcodes.php:81
 msgid "Submission Form"
-msgstr ""
+msgstr "Formulär"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:40
 msgid "The number of testimonials to show per page"
-msgstr ""
+msgstr "Antal vitsord att visa per sida"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:43
 msgid "This applies to the %s shortcode."
-msgstr ""
+msgstr "Detta gäller %s shortcode"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:48
 msgid "When a new testimonial is submitted"
-msgstr ""
+msgstr "När nytt vitsord läggs till"
 
+# @ strong-testimonials
 #: includes/form-general-settings.php:52
 msgid "Send notification email to"
 msgstr ""
 
 #: includes/form-general-settings.php:59 includes/guide-advanced.php:14
 msgid "Spam Control"
-msgstr ""
+msgstr "Spamkontroll"
 
 #: includes/form-general-settings.php:61
 msgid "Honeypot"
@@ -517,7 +534,7 @@ msgstr ""
 
 #: includes/form-general-settings.php:72
 msgid "Recommended."
-msgstr ""
+msgstr "Rekommenderat"
 
 #: includes/form-general-settings.php:72
 msgid ""
@@ -534,27 +551,27 @@ msgstr ""
 
 #: includes/form-general-settings.php:101
 msgid "settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: includes/form-general-settings.php:103
 msgid "no settings"
-msgstr ""
+msgstr "Inga inställningar"
 
 #: includes/form-general-settings.php:108
 msgid "inactive"
-msgstr ""
+msgstr "inaktiv"
 
 #: includes/form-general-settings.php:114
 msgid "not installed"
-msgstr ""
+msgstr "ej installerad"
 
 #: includes/form-general-settings.php:115
 msgid "install plugin"
-msgstr ""
+msgstr "installera plugg"
 
 #: includes/form-general-settings.php:119
 msgid "plugin page"
-msgstr ""
+msgstr "Plugin-sida"
 
 #: includes/guide-advanced.php:3 includes/guide-simple.php:3
 #: includes/guide-start.php:3
@@ -562,14 +579,17 @@ msgid ""
 "View some examples on the <a href=\"http://demos.wpmission.com/strong-"
 "testimonials/\" target=\"_blank\">demo site</a>."
 msgstr ""
+"Se exempel på <a href=\"http://demos.wpmission.com/strong-testimonials/\" "
+"target=\"_blank\">demosajten</a>."
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:5
 msgid "Make your testimonials sing using advanced features."
-msgstr ""
+msgstr "Få vitsorden att sjunga via de avancerade alternativen."
 
 #: includes/guide-advanced.php:9 includes/guide-simple.php:10
 msgid "Gather"
-msgstr ""
+msgstr "Samla"
 
 #: includes/guide-advanced.php:12
 msgid "Customize the form to meet your needs."
@@ -581,13 +601,10 @@ msgid ""
 "testimonials/\" target=\"_blank\">Here</a> is a full tutorial."
 msgstr ""
 
-#: includes/guide-advanced.php:13
-msgid "Featured Images"
-msgstr ""
-
+# @ strong-testimonials
 #: includes/guide-advanced.php:13
 msgid "AKA thumbnails."
-msgstr ""
+msgstr "alt. miniatyrbilder"
 
 #: includes/guide-advanced.php:13
 msgid "Allow your clients to include a photo or a logo with their testimonial."
@@ -609,19 +626,21 @@ msgstr ""
 
 #: includes/guide-advanced.php:21 includes/guide-simple.php:15
 msgid "Publish"
-msgstr ""
+msgstr "Publicera"
 
-#: includes/guide-advanced.php:24 strong-testimonials.php:252
+# @ strong-testimonials
+#: includes/guide-advanced.php:24 strong-testimonials.php:248
 msgid "Categories"
-msgstr ""
+msgstr "Kategorier"
 
 #: includes/guide-advanced.php:24
 msgid "Organize your testimonials by year, salesperson, event, etc."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:25
 msgid "Excerpts"
-msgstr ""
+msgstr "Utdrag"
 
 #: includes/guide-advanced.php:25
 msgid ""
@@ -629,9 +648,10 @@ msgid ""
 "liners for use in widgets and the cycle shortcode."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:26
 msgid "Skip Loading Stylesheets"
-msgstr ""
+msgstr "Hoppa över att ladda stilmallar"
 
 #: includes/guide-advanced.php:26
 msgid ""
@@ -643,23 +663,26 @@ msgstr ""
 #: includes/guide-advanced.php:32 includes/guide-simple.php:20
 #: includes/settings-shortcodes-strong.php:17
 msgid "Display"
-msgstr ""
+msgstr "Visa"
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:35 includes/settings.php:302
 msgid "Shortcodes"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:35
 msgid "Several ways to show your testimonials."
-msgstr ""
+msgstr "Flera sätt att visa dina vitsord."
 
+# @ strong-testimonials
 #: includes/guide-advanced.php:36 includes/settings.php:151
 msgid "Cycle Shortcode"
-msgstr ""
+msgstr "Rotera shortcode"
 
 #: includes/guide-advanced.php:36
 msgid "Add a testimonial slider to any page."
-msgstr ""
+msgstr "Lägg vitsords-slider till valfri sida."
 
 #: includes/guide-advanced.php:37
 msgid "Widgets"
@@ -673,7 +696,7 @@ msgstr ""
 
 #: includes/guide-advanced.php:38 includes/settings.php:152
 msgid "Client Section"
-msgstr ""
+msgstr "Gästsektion"
 
 #: includes/guide-advanced.php:38
 msgid ""
@@ -681,9 +704,10 @@ msgid ""
 "testimonial content."
 msgstr ""
 
+# @ default
 #: includes/guide-advanced.php:39
 msgid "As Posts"
-msgstr ""
+msgstr "Som Poster"
 
 #: includes/guide-advanced.php:39
 msgid ""
@@ -693,7 +717,7 @@ msgstr ""
 
 #: includes/guide-future.php:3
 msgid "Here's some of what is planned for upcoming versions."
-msgstr ""
+msgstr "Här är några exempel på vad som kommer i kommande versioner."
 
 #: includes/guide-notes.php:3
 msgid "Template files"
@@ -756,7 +780,7 @@ msgstr ""
 
 #: includes/guide-notes.php:15
 msgid "Translations"
-msgstr ""
+msgstr "Översättningar"
 
 #: includes/guide-notes.php:16
 msgid ""
@@ -781,7 +805,7 @@ msgstr ""
 
 #: includes/guide-notes.php:20
 msgid "\"Nofollow\" links"
-msgstr ""
+msgstr "\"Nofollow\" länkar"
 
 #: includes/guide-notes.php:21
 msgid ""
@@ -804,7 +828,7 @@ msgstr ""
 
 #: includes/guide-simple.php:5
 msgid "Add testimonials to your site in three simple steps."
-msgstr ""
+msgstr "Addera vitsord till din sajt i tre enkla steg."
 
 #: includes/guide-simple.php:6
 msgid "Use the default settings to hit the ground running."
@@ -813,6 +837,7 @@ msgstr ""
 #: includes/guide-simple.php:11
 msgid "To accept new testimonials, add the shortcode [wpmtst-form] to a page."
 msgstr ""
+"För att ta emot nya vitsord, infoga shortcoden [wpmtst-form] på en sida."
 
 #: includes/guide-simple.php:16
 msgid ""
@@ -827,47 +852,52 @@ msgstr ""
 
 #: includes/guide-start.php:5
 msgid "A testimonial is like a blog post."
-msgstr ""
+msgstr "Ett vitsord är som en bloggpost."
 
 #: includes/guide-start.php:6
 msgid "They have many of the same fields and features:"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide-start.php:8
 msgid "A Title"
-msgstr ""
+msgstr "En Titel"
 
 #: includes/guide-start.php:9
 msgid "a permalink"
-msgstr ""
+msgstr "en permalänk"
 
 #: includes/guide-start.php:10
 msgid "Some content."
-msgstr ""
+msgstr "En del innehåll"
 
+# @ strong-testimonials
 #: includes/guide-start.php:11
 msgid "an excerpt"
-msgstr ""
+msgstr "Ett utdrag"
 
 #: includes/guide-start.php:12
 msgid "a featured image (thumbnail)"
-msgstr ""
+msgstr "En utvald bild"
 
+# @ strong-testimonials
 #: includes/guide-start.php:13
 msgid "custom fields"
-msgstr ""
+msgstr "anpassade fält"
 
 #: includes/guide-start.php:13
 msgid "(like client name and email)"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide-start.php:14
 msgid "categories"
-msgstr ""
+msgstr "kategorier"
 
+# @ strong-testimonials
 #: includes/guide-start.php:17
 msgid "How do you want to use testimonials?"
-msgstr ""
+msgstr "Hur vill du använda vitsordet?"
 
 #: includes/guide-start.php:18
 msgid ""
@@ -885,7 +915,7 @@ msgstr ""
 
 #: includes/guide-start.php:21
 msgid "You are invited to participate."
-msgstr ""
+msgstr "Du är inbjuden att deltaga."
 
 #: includes/guide-start.php:22
 msgid ""
@@ -893,13 +923,14 @@ msgid ""
 "be able to vote on feature requests."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/guide.php:11
 msgid "Strong Testimonials Guide"
-msgstr ""
+msgstr "Guide för Strong Testimonials"
 
 #: includes/guide.php:17
 msgid "Getting Started"
-msgstr ""
+msgstr "Kom igång"
 
 #: includes/guide.php:18
 msgid "Simple"
@@ -907,7 +938,7 @@ msgstr ""
 
 #: includes/guide.php:19
 msgid "Advanced"
-msgstr ""
+msgstr "Avancerat"
 
 #: includes/guide.php:20 includes/settings-shortcodes-strong.php:15
 #: includes/tabs/notes.php:5
@@ -920,29 +951,31 @@ msgstr ""
 
 #: includes/settings-shortcodes-strong.php:10
 msgid "The new shortcode that does it all."
-msgstr ""
+msgstr "Den nya shortcoden som fixar allt."
 
 #: includes/settings-shortcodes-strong.php:16 includes/tabs/form.php:5
 msgid "The Form"
-msgstr ""
+msgstr "Formuläret"
 
 #: includes/settings-shortcodes-strong.php:18 includes/tabs/slideshow.php:5
 msgid "Slideshow"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/settings-shortcodes-strong.php:19
 msgid "Read More"
-msgstr ""
+msgstr "Läs mer"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes-strong.php:20 includes/tabs/child.php:5
 msgid "Child Shortcodes"
-msgstr ""
+msgstr "Child-shortcoder"
 
 #: includes/settings-shortcodes-strong.php:21 includes/tabs/child.php:38
 #: includes/tabs/examples.php:5 includes/tabs/form.php:31
 #: includes/tabs/readmore.php:37
 msgid "Examples"
-msgstr ""
+msgstr "Exempel"
 
 #: includes/settings-shortcodes.php:9
 msgid ""
@@ -950,42 +983,51 @@ msgid ""
 "<code>[strong]</code> shortcode."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:13
 msgid "Show All"
-msgstr ""
+msgstr "Visa alla"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:16
 msgid "from all categories"
-msgstr ""
+msgstr "Från alla kategorier"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:20
 msgid "or a single category"
-msgstr ""
+msgstr "eller en enstaka kategori"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:24 includes/settings-shortcodes.php:56
 #: includes/settings-shortcodes.php:64 includes/settings-shortcodes.php:92
 msgid "or multiple categories"
-msgstr ""
+msgstr "eller flera kategorier"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:31
 msgid "Cycle"
-msgstr ""
+msgstr "Rotera"
 
 #: includes/settings-shortcodes.php:34
 msgid "<a href=\"%s\">configure</a>"
-msgstr ""
+msgstr "<a href=\"%s\">ställ in</a>"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:41 includes/settings.php:273
+#: includes/widget.php:211
 msgid "Random"
-msgstr ""
+msgstr "Slumpvis"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:44
 msgid "a single random testimonial"
-msgstr ""
+msgstr "ett enstaka slumpmässigt vitsord"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:48
 msgid "or a certain number"
-msgstr ""
+msgstr "eller ett visst antal"
 
 #: includes/settings-shortcodes.php:52
 msgid "a single testimonial from a single category"
@@ -997,11 +1039,12 @@ msgstr ""
 
 #: includes/settings-shortcodes.php:71
 msgid "Single"
-msgstr ""
+msgstr "Enskilt"
 
+# @ strong-testimonials
 #: includes/settings-shortcodes.php:74
 msgid "one specific testimonial"
-msgstr ""
+msgstr "Ett specifikt vitsord"
 
 #: includes/settings-shortcodes.php:84
 msgid "a form for visitors to submit testimonials"
@@ -1009,66 +1052,79 @@ msgstr ""
 
 #: includes/settings-shortcodes.php:88
 msgid "and add them to a single category"
-msgstr ""
+msgstr "och lägg dem till en enda kategori"
 
+# @ strong-testimonials
 #: includes/settings.php:140
 msgid "Testimonial Settings"
-msgstr ""
+msgstr "Inställningar Vitsord"
 
+# @ default
 #: includes/settings.php:144
 msgid "Settings saved."
-msgstr ""
+msgstr "Inställningar sparade"
 
+# @ strong-testimonials
 #: includes/settings.php:150
 msgid "General"
-msgstr ""
+msgstr "Generellt"
 
 #: includes/settings.php:172
 msgid "Remember to save changes before switching tabs."
 msgstr ""
 
-#: includes/settings.php:274
+# @ strong-testimonials
+#: includes/settings.php:274 includes/widget.php:212
 msgid "Newest first"
-msgstr ""
+msgstr "Nyast först"
 
-#: includes/settings.php:275
+# @ strong-testimonials
+#: includes/settings.php:275 includes/widget.php:213
 msgid "Oldest first"
-msgstr ""
+msgstr "Äldst först"
 
 #: includes/settings.php:307
 msgid "Original"
-msgstr ""
+msgstr "Ursprunglig"
 
-#: includes/shortcode-form.php:67 includes/shortcode-form.php:205
-#: includes/shortcode-form.php:362 includes/shortcode-form.php:374
+#: includes/shortcode-form.php:48 includes/shortcode-form.php:304
+#: includes/shortcode-form.php:316
 msgid "There was a problem processing your testimonial."
-msgstr ""
+msgstr "Något trasslade till sig med ditt vitsord."
 
-#: includes/shortcode-form.php:216
+# @ strong-testimonials
+#: includes/shortcode-form.php:152
 msgid "Thank you! Your testimonial is awaiting moderation."
-msgstr ""
+msgstr "Tack! Ditt vitsord väntar på att ses av vår webadministratör."
 
-#: includes/shortcode-form.php:229
+# @ strong-testimonials
+#: includes/shortcode-form.php:172
 msgid "Required Field"
-msgstr ""
+msgstr "Obligatoriskt fält"
 
-#: includes/shortcode-form.php:330
+# @ strong-testimonials
+#: includes/shortcode-form.php:272
 msgid "Captcha"
-msgstr ""
+msgstr "CAPTCHA Bild"
 
-#: includes/shortcode-form.php:343
+# @ strong-testimonials
+#: includes/shortcode-form.php:285
 msgid "Add Testimonial"
-msgstr ""
+msgstr "Lägg till Vitsord"
 
-#: includes/shortcode-strong.php:73 includes/shortcode-strong.php:120
+# @ strong-testimonials
+#: includes/shortcode-strong.php:61 includes/shortcode-strong.php:108
+#: includes/widget.php:149
 msgid "Read more"
-msgstr ""
+msgstr "Läs mer"
 
-#: includes/shortcodes.php:422
+# @ strong-testimonials
+#: includes/shortcodes.php:421
 msgid "New testimonial for"
-msgstr ""
+msgstr "Nytt vitsord för"
 
-#: includes/shortcodes.php:424
+# @ strong-testimonials
+#: includes/shortcodes.php:423
 msgid ""
 "New testimonial submission for %s. This is awaiting action from the website "
 "administrator."
@@ -1080,19 +1136,20 @@ msgstr ""
 
 #: includes/tabs/child.php:10
 msgid "the client section"
-msgstr ""
+msgstr "Gästsektion"
 
 #: includes/tabs/child.php:11
 msgid "required for displaying custom fields"
-msgstr ""
+msgstr "nödvändigt för att visa anpassade fält"
 
+# @ strong-testimonials
 #: includes/tabs/child.php:17
 msgid "a custom field"
-msgstr ""
+msgstr "ett anpassat fält"
 
 #: includes/tabs/child.php:24
 msgid "with a CSS class"
-msgstr ""
+msgstr "med en CSS-klass"
 
 #: includes/tabs/child.php:31
 msgid "as a link with another field<br /> that opens in a new tab"
@@ -1101,16 +1158,16 @@ msgstr ""
 #: includes/tabs/child.php:41 includes/tabs/form.php:34
 #: includes/tabs/readmore.php:41
 msgid "minimal"
-msgstr ""
+msgstr "minimal"
 
 #: includes/tabs/child.php:45 includes/tabs/form.php:38
 #: includes/tabs/readmore.php:49
 msgid "full"
-msgstr ""
+msgstr "fullt"
 
 #: includes/tabs/examples.php:8
 msgid "the form"
-msgstr ""
+msgstr "formuläret"
 
 #: includes/tabs/examples.php:12
 msgid "show all, 5 per page, with pagination above and below"
@@ -1141,7 +1198,7 @@ msgstr ""
 
 #: includes/tabs/form.php:12
 msgid "add new submissions to a category"
-msgstr ""
+msgstr "lägg till nya bidrag till en kategori"
 
 #: includes/tabs/form.php:18 includes/tabs/part-style.php:10
 msgid "add classes to <code>div.strong-container</code>"
@@ -1149,7 +1206,7 @@ msgstr ""
 
 #: includes/tabs/form.php:25 includes/tabs/part-style.php:15
 msgid "skip plugin stylesheet"
-msgstr ""
+msgstr "Skippa pluggens stilmall"
 
 #: includes/tabs/notes.php:8
 msgid "Multiple"
@@ -1161,9 +1218,10 @@ msgid ""
 "g. <code>[strong ... /]</code> or <code>[strong ...][/strong]</code>."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/tabs/notes.php:14 strong-testimonials.php:47
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: includes/tabs/notes.php:16
 msgid ""
@@ -1179,7 +1237,7 @@ msgstr ""
 
 #: includes/tabs/notes.php:26
 msgid "Help"
-msgstr ""
+msgstr "Hjälp"
 
 #: includes/tabs/notes.php:28
 msgid ""
@@ -1189,23 +1247,24 @@ msgstr ""
 
 #: includes/tabs/part-content.php:3
 msgid "Content"
-msgstr ""
+msgstr "Innehåll"
 
 #: includes/tabs/part-content.php:6
 msgid "entire post"
-msgstr ""
+msgstr "hela posten"
 
+# @ strong-testimonials
 #: includes/tabs/part-content.php:11
 msgid "excerpt"
-msgstr ""
+msgstr "utdrag"
 
 #: includes/tabs/part-content.php:12
 msgid "overrides <b>length limit</b>"
-msgstr ""
+msgstr "överskriver <b>längdbegränsningen</b>"
 
 #: includes/tabs/part-content.php:18
 msgid "length limit"
-msgstr ""
+msgstr "längdbegränsning"
 
 #: includes/tabs/part-content.php:19
 msgid "will break on a space and add an ellipsis"
@@ -1213,27 +1272,27 @@ msgstr ""
 
 #: includes/tabs/part-pagination.php:3
 msgid "Pagination"
-msgstr ""
+msgstr "Paginering"
 
 #: includes/tabs/part-pagination.php:6
 msgid "per page"
-msgstr ""
+msgstr "per sida"
 
 #: includes/tabs/part-pagination.php:10
 msgid "navigation after"
-msgstr ""
+msgstr "navigation efter"
 
 #: includes/tabs/part-pagination.php:11
 msgid "default"
-msgstr ""
+msgstr "grundinställning"
 
 #: includes/tabs/part-pagination.php:14
 msgid "navigation before"
-msgstr ""
+msgstr "navigation före"
 
 #: includes/tabs/part-pagination.php:18
 msgid "navigation before & after"
-msgstr ""
+msgstr "navigation före & efter"
 
 #: includes/tabs/part-parts.php:3
 msgid "Parts"
@@ -1241,67 +1300,74 @@ msgstr ""
 
 #: includes/tabs/part-parts.php:7
 msgid "show the Title"
-msgstr ""
+msgstr "visa Titeln"
 
 #: includes/tabs/part-parts.php:8 includes/tabs/part-parts.php:15
+#: includes/widget.php:379 includes/widget.php:388 includes/widget.php:397
 msgid "if included in Fields"
-msgstr ""
+msgstr "om inkluderade i fälten"
 
+# @ strong-testimonials
 #: includes/tabs/part-parts.php:14
 msgid "show the Featured Image"
-msgstr ""
+msgstr "visa den Utvalda bilden"
 
 #: includes/tabs/part-parts.php:21
 msgid "\"Read more\" link to the full post"
-msgstr ""
+msgstr "\"Läs mer\"-länk till hela posten"
 
 #: includes/tabs/part-parts.php:22
 msgid "for use with <b>excerpt</b> or <b>length limit</b> only"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/tabs/part-parts.php:28
 msgid "\"Read more\" phrase"
-msgstr ""
+msgstr "\"Läs mer\"-fras"
 
 #: includes/tabs/part-parts.php:29 includes/tabs/readmore.php:11
 msgid "default text is \"Read more\" (translatable)"
-msgstr ""
+msgstr "grundtext är \"Läs mer\" (översättningsbart)"
 
 #: includes/tabs/part-selection.php:3
 msgid "Selection"
-msgstr ""
+msgstr "Markering"
 
+# @ strong-testimonials
 #: includes/tabs/part-selection.php:6
 msgid "show all"
-msgstr ""
+msgstr "visa alla"
 
+# @ strong-testimonials
 #: includes/tabs/part-selection.php:10
 msgid "show a certain number"
-msgstr ""
+msgstr "visa ett visst antal"
 
 #: includes/tabs/part-selection.php:14
 msgid "order"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/tabs/part-selection.php:20
 msgid "by category"
-msgstr ""
+msgstr "per kategori"
 
 #: includes/tabs/part-selection.php:25
 msgid "by post ID"
-msgstr ""
+msgstr "per post ID"
 
 #: includes/tabs/part-style.php:3
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: includes/tabs/part-style.php:6
 msgid "select a theme template file"
 msgstr ""
 
+# @ strong-testimonials
 #: includes/tabs/readmore.php:5
 msgid "\"Read More\" link"
-msgstr ""
+msgstr "\"Läs Mer\"-länk"
 
 #: includes/tabs/readmore.php:6
 msgid "must not be inside another [ strong ] shortcode"
@@ -1309,27 +1375,28 @@ msgstr ""
 
 #: includes/tabs/readmore.php:10
 msgid "appears after the loop"
-msgstr ""
+msgstr "visas efter loopen"
 
 #: includes/tabs/readmore.php:19
 msgid "to another page (required)"
-msgstr ""
+msgstr "till annan sida (obligatoriskt)"
 
 #: includes/tabs/readmore.php:20
 msgid "ID or slug"
-msgstr ""
+msgstr "ID eller slugg"
 
 #: includes/tabs/readmore.php:28
 msgid "add classes"
-msgstr ""
+msgstr "lägg till klasser"
 
+# @ strong-testimonials
 #: includes/tabs/slideshow.php:13
 msgid "show each for (in seconds)"
-msgstr ""
+msgstr "Visa varje i (i sekunder)"
 
 #: includes/tabs/slideshow.php:19
 msgid "transition effect (in seconds)"
-msgstr ""
+msgstr "Övergångseffekt (i sekunder)"
 
 #: includes/tabs/slideshow.php:25
 msgid "no pause on hover"
@@ -1337,290 +1404,181 @@ msgstr ""
 
 #: includes/tabs/slideshow.php:26
 msgid "will pause by default"
-msgstr ""
+msgstr "kommer pausera per grundinställning"
 
 #: includes/widget.php:19
-msgctxt "widget description"
-msgid "Strong Testimonials widget."
+msgid "Strong Testimonials widget. Static or Cycle options."
 msgstr ""
 
+# @ strong-testimonials
 #: includes/widget.php:26 includes/widget.php:29
-msgctxt "widget title"
 msgid "Testimonials"
-msgstr ""
+msgstr "Vitsord"
 
-#: includes/widget.php:149
-msgctxt "widget output"
-msgid "Read more"
-msgstr ""
-
-#: includes/widget.php:215
-msgctxt "widget setting: display order"
-msgid "Random"
-msgstr ""
-
-#: includes/widget.php:216
-msgctxt "widget setting: display order"
-msgid "Newest first"
-msgstr ""
-
-#: includes/widget.php:217
-msgctxt "widget setting: display order"
-msgid "Oldest first"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:241
-msgctxt "widget setting"
-msgid "Title"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:252
-msgctxt "category selection"
-msgid "Category"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:259
-msgctxt "categories"
+# @ strong-testimonials
+#: includes/widget.php:242
 msgid "Show all"
-msgstr ""
+msgstr "Visa alla"
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:278
-msgctxt "display order"
-msgid "Order"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:299
-msgctxt "widget display option"
+# @ strong-testimonials
+#: includes/widget.php:271
 msgid "Cycle Mode"
-msgstr ""
+msgstr "Roteringsläge"
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:308
-msgctxt "widget display option"
+# @ strong-testimonials
+#: includes/widget.php:276
 msgid "Static Mode"
-msgstr ""
+msgstr "Statiskt läge"
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:322 includes/widget.php:398
-msgctxt "how many to display"
-msgid "Show"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:334
-msgctxt "display all"
-msgid "All"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:345
-msgctxt "slideshow"
-msgid "Show each for"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:363
-msgctxt "slideshow"
-msgid "Effect duration"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:382
-msgctxt "slideshow"
-msgid "Pause on hover"
-msgstr ""
-
-#: includes/widget.php:414
-msgctxt "widget options"
-msgid "Content"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:428
-msgctxt "setting description"
+#: includes/widget.php:350
 msgid ""
 "Excerpts are hand-crafted summaries of your testimonial. You may need to "
 "enable them in the post editor."
 msgstr ""
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:439
-msgctxt "testimonial content limit"
+# @ strong-testimonials
+#: includes/widget.php:356
 msgid "Character limit"
-msgstr ""
+msgstr "Teckengräns"
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:470
-msgctxt "display custom fields"
-msgid "Show Parts"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:480
-msgctxt "testimonial"
-msgid "Title"
-msgstr ""
-
-#. translators: This appears in widget settings. Refers to your custom fields.
-#. translators: This appears in widget settings.
-#: includes/widget.php:487 includes/widget.php:506 includes/widget.php:525
-msgctxt "tooltip"
-msgid "if included in Fields"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:499
-msgctxt "the testimonial thumbnail"
-msgid "Featured Images"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:518
-msgctxt "display custom fields"
+#: includes/widget.php:395
 msgid "Client Info"
-msgstr ""
+msgstr "Gästinfo"
 
-#. translators: This appears in widget settings.
-#: includes/widget.php:538
-msgctxt "display a link"
-msgid "\"Read more\" Link"
-msgstr ""
-
-#. translators: %s is the name of the plugin.
-#: strong-testimonials.php:195
-msgctxt "installation"
+# @ strong-testimonials
+#: strong-testimonials.php:193
 msgid "Unable to load %s"
-msgstr ""
+msgstr "Kan inte ladda %s"
 
-#. translators: %s is a WordPress version number.
-#: strong-testimonials.php:198
-msgctxt "installation"
+# @ strong-testimonials
+#: strong-testimonials.php:194
 msgid ""
 "This plugin requires <strong>WordPress %s</strong> or higher so it has been "
 "deactivated."
 msgstr ""
 
-#: strong-testimonials.php:199
-msgctxt "installation"
+# @ strong-testimonials
+#: strong-testimonials.php:195
 msgid "Please upgrade WordPress and try again."
-msgstr ""
+msgstr "Vänligen uppgradera WordPress och försök igen."
 
-#: strong-testimonials.php:200
-msgctxt "installation"
+# @ strong-testimonials
+#: strong-testimonials.php:196
 msgid "Back to the WordPress <a href=\"%s\">Plugins page</a>"
 msgstr ""
 
-#: strong-testimonials.php:213
+# @ strong-testimonials
+#: strong-testimonials.php:209
 msgctxt "post type general name"
 msgid "Testimonials"
-msgstr ""
+msgstr "Vitsord"
 
-#: strong-testimonials.php:214
+# @ strong-testimonials
+#: strong-testimonials.php:210
 msgctxt "post type singular name"
 msgid "Testimonial"
-msgstr ""
+msgstr "Vitsord"
 
-#: strong-testimonials.php:215
-msgctxt "post type"
+# @ strong-testimonials
+#: strong-testimonials.php:211
 msgid "Add New"
-msgstr ""
+msgstr "Skapa ny"
 
-#: strong-testimonials.php:216
+# @ strong-testimonials
+#: strong-testimonials.php:212
 msgid "Add New Testimonial"
-msgstr ""
+msgstr "Skapa nytt Vitsord"
 
-#: strong-testimonials.php:217
+# @ strong-testimonials
+#: strong-testimonials.php:213
 msgid "Edit Testimonial"
-msgstr ""
+msgstr "Redigera Vitsord"
 
-#: strong-testimonials.php:218
+# @ strong-testimonials
+#: strong-testimonials.php:214
 msgid "New Testimonial"
-msgstr ""
+msgstr "Nytt Vitsord"
 
-#: strong-testimonials.php:219
+# @ strong-testimonials
+#: strong-testimonials.php:215
 msgid "All Testimonials"
-msgstr ""
+msgstr "Alla vitsord"
 
-#: strong-testimonials.php:220
+# @ strong-testimonials
+#: strong-testimonials.php:216
 msgid "View Testimonial"
-msgstr ""
+msgstr "Granska Vitsord"
 
-#: strong-testimonials.php:221
+# @ strong-testimonials
+#: strong-testimonials.php:217
 msgid "Search Testimonials"
-msgstr ""
+msgstr "Spara Vitsord"
 
-#: strong-testimonials.php:222
-msgctxt "post type"
+# @ strong-testimonials
+#: strong-testimonials.php:218 strong-testimonials.php:256
 msgid "Nothing Found"
-msgstr ""
+msgstr "Inga poster återfanns"
 
-#: strong-testimonials.php:223
-msgctxt "post type"
+# @ strong-testimonials
+#: strong-testimonials.php:219 strong-testimonials.php:257
 msgid "Nothing found in Trash"
-msgstr ""
+msgstr "Inga poster återfanns i Trash"
 
-#: strong-testimonials.php:229
-msgctxt "post type singular label"
+# @ strong-testimonials
+#: strong-testimonials.php:225 strong-testimonials.php:231
 msgid "testimonial"
-msgstr ""
+msgstr "vitsord"
 
-#: strong-testimonials.php:235
-msgctxt "slug"
-msgid "testimonial"
-msgstr ""
-
-#: strong-testimonials.php:253
+# @ default
+#: strong-testimonials.php:249
+msgctxt "strong-testimonials"
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
-#: strong-testimonials.php:254
+# @ strong-testimonials
+#: strong-testimonials.php:250
 msgid "All Categories"
-msgstr ""
+msgstr "Alla kategorier"
 
-#: strong-testimonials.php:255
+# @ default
+#: strong-testimonials.php:251
+msgctxt "strong-testimonials"
 msgid "Add New Category"
-msgstr ""
+msgstr "Skapa ny kategori"
 
-#: strong-testimonials.php:256
+# @ strong-testimonials
+#: strong-testimonials.php:252
 msgid "Edit Category"
-msgstr ""
+msgstr "Redigera kategori"
 
-#: strong-testimonials.php:257
+# @ strong-testimonials
+#: strong-testimonials.php:253
 msgid "New Category"
-msgstr ""
+msgstr "Ny kategori"
 
-#: strong-testimonials.php:258
+# @ strong-testimonials
+#: strong-testimonials.php:254
 msgid "View Category"
-msgstr ""
+msgstr "Granska kategori"
 
-#: strong-testimonials.php:259
+# @ strong-testimonials
+#: strong-testimonials.php:255
 msgid "Search Category"
-msgstr ""
+msgstr "Sök kategori"
 
-#: strong-testimonials.php:260
-msgid "Nothing Found"
-msgstr ""
-
-#: strong-testimonials.php:261
-msgid "Nothing found in Trash"
-msgstr ""
-
+# @ strong-testimonials
 #. Plugin Name of the plugin/theme
 msgid "Strong Testimonials"
-msgstr ""
+msgstr "Strong Testimonials"
 
 #. Plugin URI of the plugin/theme
 msgid "http://www.wpmission.com/plugins/strong-testimonials/"
 msgstr ""
 
+# @ strong-testimonials
 #. Description of the plugin/theme
 msgid "A powerful testimonial manager."
-msgstr ""
+msgstr "Ett kraftfullt verktyg för vitsord"
 
 #. Author of the plugin/theme
 msgid "Chris Dillon"
@@ -1628,4 +1586,16 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.wpmission.com/contact"
-msgstr ""
+msgstr "http://www.wpmission.com/contact"
+
+# @ strong-testimonials
+#~ msgid "Testimonials Cycle"
+#~ msgstr "Vitsord rotera"
+
+# @ strong-testimonials
+#~ msgid "Random Testimonial"
+#~ msgstr "Slumpmässigt vitsord"
+
+# @ strong-testimonials
+#~ msgid "Testimonial Submission Form"
+#~ msgstr "Vitsord formulär"

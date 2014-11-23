@@ -63,6 +63,7 @@ function wpmtst_form_shortcode( $atts ) {
 	 */
 	if ( isset( $_POST['wpmtst_form_submitted'] ) ) {
 	
+		/* translators: Front-end error message.*/
 		if ( ! wp_verify_nonce( $_POST['wpmtst_form_submitted'], 'wpmtst_submission_form' ) )
 			die( __( 'There was a problem processing your testimonial.', 'strong-testimonials' ) );
 
@@ -202,6 +203,7 @@ function wpmtst_form_shortcode( $atts ) {
 			}
 			else {
 				// @TODO Add general error message to top of form.
+				/* translators: Front-end error message.*/
 				$errors['post'] = __( 'There was a problem processing your testimonial.', 'strong-testimonials' );
 			}
 
@@ -337,6 +339,7 @@ function wpmtst_form_shortcode( $atts ) {
 		}
 	}
 
+	/* translators: The submit button on testimonial form.*/
 	$html .= '<p class="form-field">';
 	$html .= '<input type="submit" id="wpmtst_submit_testimonial"'
 				.' name="wpmtst_submit_testimonial"'
@@ -359,6 +362,7 @@ function wpmtst_honeypot_before() {
 	$value = isset( $_POST['wpmtst_if_visitor'] ) ? $_POST['wpmtst_if_visitor'] : '';
 	if ( isset( $_POST['wpmtst_if_visitor'] ) && ! empty( $_POST['wpmtst_if_visitor'] ) ) {
 		do_action( 'honeypot_before_spam_testimonial', $_POST );
+		/* translators: Front-end error message.*/
 		die( __( 'There was a problem processing your testimonial.', 'strong-testimonials' ) );
 	}
 	return;
@@ -371,6 +375,7 @@ function wpmtst_honeypot_before() {
 function wpmtst_honeypot_after() {
 	if ( ! isset ( $_POST['wpmtst_after'] ) ) {
 		do_action( 'honeypot_after_spam_testimonial', $_POST );
+		/* translators: Front-end error message.*/
 		die( __( 'There was a problem processing your testimonial.', 'strong-testimonials' ) );
 	}
 	return;

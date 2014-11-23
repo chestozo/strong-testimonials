@@ -584,6 +584,9 @@ ul.description {
 	line-height: 19px;
 	vertical-align: baseline;
 }
+.wpmtst-inner-box p:first-child {
+	font-weight: 700;
+}
 
 .wpmtst-mode .row {
 	display: block;

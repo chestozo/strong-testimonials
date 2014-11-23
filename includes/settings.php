@@ -10,30 +10,31 @@
  * Menus
  */
 function wpmtst_settings_menu() {
-	add_submenu_page( 'edit.php?post_type=wpm-testimonial', // $parent_slug
-										'Settings',                           // $page_title
-										'Settings',                           // $menu_title
-										'manage_options',                     // $capability
-										'settings',                           // $menu_slug
-										'wpmtst_settings_page' );             // $function
+	add_submenu_page( 'edit.php?post_type=wpm-testimonial',     // $parent_slug
+										__( 'Settings', 'strong-testimonials' ),  // $page_title
+										__( 'Settings', 'strong-testimonials' ),  // $menu_title
+										'manage_options',                         // $capability
+										'settings',                               // $menu_slug
+										'wpmtst_settings_page' );                 // $function
 
 	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
-										'Fields',
-										'Fields',
+										__( 'Fields', 'strong-testimonials' ),
+										__( 'Fields', 'strong-testimonials' ),
 										'manage_options',
 										'fields',
 										'wpmtst_settings_custom_fields' );
 
 	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
-										'Shortcodes',
-										'Shortcodes',
+										__( 'Shortcodes', 'strong-testimonials' ),
+										__( 'Shortcodes', 'strong-testimonials' ),
 										'manage_options',
 										'shortcodes',
 										'wpmtst_settings_shortcodes' );
 
 	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
-										'Guide',
-										'<div class="dashicons dashicons-info"></div> Guide',
+										_x( 'Guide', 'noun', 'strong-testimonials' ),
+										/* translators: %s is an icon. */
+										sprintf( _x ('%s Guide', 'noun', 'strong-testimonials' ), '<div class="dashicons dashicons-info"></div>' ),
 										'manage_options',
 										'guide',
 										'wpmtst_guide' );
@@ -147,7 +148,7 @@ function wpmtst_settings_page() {
 
 		<?php $active_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'general'; ?>
 		<h2 class="nav-tab-wrapper">
-			<a href="?post_type=wpm-testimonial&page=settings&tab=general" class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php _e( 'General', 'strong-testimonials' ); ?></a>
+			<a href="?post_type=wpm-testimonial&page=settings&tab=general" class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php _ex( 'General', 'adjective', 'strong-testimonials' ); ?></a>
 			<a href="?post_type=wpm-testimonial&page=settings&tab=cycle" class="nav-tab <?php echo $active_tab == 'cycle' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Cycle Shortcode', 'strong-testimonials' ); ?></a>
 			<a href="?post_type=wpm-testimonial&page=settings&tab=client" class="nav-tab <?php echo $active_tab == 'client' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Client Section', 'strong-testimonials' ); ?></a>
 		</h2>
