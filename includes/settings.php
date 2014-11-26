@@ -271,9 +271,9 @@ function wpmtst_cycle_section() {
 	
 	// @TODO: de-duplicate (in widget too)
 	$order_list = array(
-			'rand'   => __( 'Random', 'strong-testimonials' ),
-			'recent' => __( 'Newest first', 'strong-testimonials' ),
-			'oldest' => __( 'Oldest first', 'strong-testimonials' ),
+			'rand'   => _x( 'Random', 'display order', 'strong-testimonials' ),
+			'recent' => _x( 'Newest first', 'display order', 'strong-testimonials' ),
+			'oldest' => _x( 'Oldest first', 'display order', 'strong-testimonials' ),
 	);
 
 	$category_list = get_terms( 'wpm-testimonial-category', array(

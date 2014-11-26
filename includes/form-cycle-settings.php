@@ -45,7 +45,7 @@
 		<label for="cycle-order">
 			<?php
 			/* translators: This is on the Cycle Shortcode settings screen. */
-			_e( 'Order', 'noun', 'strong-testimonials' );
+			_ex( 'Order', 'noun', 'strong-testimonials' );
 			?>
 		</label>
 	</th>
@@ -65,7 +65,7 @@
 	<th scope="row">
 		<?php
 		/* translators: This is on the Cycle Shortcode settings screen. */
-		_e( 'How many?', 'strong-testimonials' );
+		_ex( 'How many?', 'quantity', 'strong-testimonials' );
 		?>
 	</th>
 	<td>
@@ -205,7 +205,7 @@
 	<th scope="row">
 		<?php
 		/* translators: This is on the Cycle Shortcode settings screen. */
-		_ex( '"Read more" link', 'display a link', 'strong-testimonials' );
+		_e( '"Read more" link', 'strong-testimonials' );
 		?>
 	</th>
 	<td>
@@ -242,7 +242,7 @@
 				<option value="">
 					<?php
 					/* translators: This is on the Cycle Shortcode settings screen. */
-					_ex( '— Select a page —', "the 'Read more' link", 'strong-testimonials' );
+					_ex( '— Select a page —', 'the "Read more" link', 'strong-testimonials' );
 					?>
 				</option>
 				<?php foreach ( $pages_list as $pages ) : ?>

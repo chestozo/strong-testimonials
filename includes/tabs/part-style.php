@@ -10,7 +10,7 @@
 		</tr>
 		<tr>
 			<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
-			<td><?php _e( 'add classes to <code>div.strong-container</code>', 'strong-testimonials' ); ?></td>
+			<td><?php _ex( 'add classes to <code>div.strong-container</code>', 'CSS', 'strong-testimonials' ); ?></td>
 			<td>class="abc"</td>
 			<td>class="abc,xyz"</td>
 		</tr>

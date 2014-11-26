@@ -20,7 +20,7 @@
 		<tr>
 			<td>
 				<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
-				<?php _e( 'length limit', 'strong-testimonials' ); ?><br />
+				<?php _ex( 'length limit', 'content', 'strong-testimonials' ); ?><br />
 				<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
 				<em><?php _e( 'will break on a space and add an ellipsis', 'strong-testimonials' ); ?></em>
 			</td>

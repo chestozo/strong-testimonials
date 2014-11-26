@@ -32,7 +32,7 @@
 		<tr>
 			<td>
 				<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
-				<?php _e( 'add classes', 'strong-testimonials' ); ?><br />
+				<?php _ex( 'add classes', 'CSS', 'strong-testimonials' ); ?><br />
 			</td>
 			<td>
 				class

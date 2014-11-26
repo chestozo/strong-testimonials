@@ -343,7 +343,7 @@ function wpmtst_form_shortcode( $atts ) {
 	$html .= '<p class="form-field">';
 	$html .= '<input type="submit" id="wpmtst_submit_testimonial"'
 				.' name="wpmtst_submit_testimonial"'
-				.' value="' . __( 'Add Testimonial', 'strong-testimonials' ) . '"'
+				.' value="' . _x( 'Add Testimonial', 'the Submit button', 'strong-testimonials' ) . '"'
 				.' class="button" validate="required:true" />';
 	$html .= '</p>';
 	

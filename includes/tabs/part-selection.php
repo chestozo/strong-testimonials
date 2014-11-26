@@ -7,7 +7,7 @@
 			<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
 			<td><?php _e( 'show all', 'strong-testimonials' ); ?></td>
 			<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
-			<td><em><?php _e( '(default)', 'strong-testimonials' ); ?></em></td>
+			<td><em>(<?php _e( 'default', 'strong-testimonials' ); ?>)</em></td>
 		</tr>
 		<tr>
 			<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>

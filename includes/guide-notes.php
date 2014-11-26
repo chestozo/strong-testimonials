@@ -17,7 +17,7 @@
 		<p><?php printf( __( 'The field labels on the submission form will not appear in the POT file so they must be translated manually in the <a href="%s">Fields editor</a>.', 'strong-testimonials' ), 'edit.php?post_type=wpm-testimonial&page=fields' ); ?></p>
 		<p><?php _e( 'The WordPress browser elements like the <button style="font-size: smaller;">Browse...</button> button and the "No file chosen" message are controlled by the WordPress language and browser language settings.', 'strong-testimonials' ); ?></p>
 		
-		<h3><?php _e( '"Nofollow" links', 'strong-testimonials' ); ?></h3>
+		<h3><?php _e( 'Nofollow links', 'strong-testimonials' ); ?></h3>
 		<p><?php _e( 'The Client Details meta box in the post editor now has an option to add <code>rel="nofollow"</code> to client URLs. There is no global setting yet so each one must be enabled manually. Future versions will likely have a global setting with a local override.', 'strong-testimonials' ); ?></p>
 		<p></p>
 		

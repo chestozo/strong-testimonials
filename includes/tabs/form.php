@@ -18,7 +18,7 @@
 	<tr>
 		<td>
 			<?php /* translators: This appears in the [strong] shortcode instructions. */ ?>
-			<?php _e( 'add classes to <code>div.strong-container</code>', 'strong-testimonials' ); ?><br />
+			<?php _ex( 'add classes to <code>div.strong-container</code>', 'CSS', 'strong-testimonials' ); ?><br />
 		</td>
 		<td>class="abc"</td>
 		<td>class="abc,xyz"</td>

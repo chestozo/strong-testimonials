@@ -45,7 +45,7 @@
 <table class="shortcode-table">
 <tr>
 	<?php /* translators: This appears on the Original Shortcodes admin screen. */ ?>
-	<th colspan="2"><h3><?php _e( 'Random', 'strong-testimonials' ); ?></h3></th>
+	<th colspan="2"><h3><?php _ex( 'Random', 'display order', 'strong-testimonials' ); ?></h3></th>
 </tr>
 <tr>
 	<?php /* translators: This appears on the Original Shortcodes admin screen. */ ?>

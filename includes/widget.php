@@ -146,7 +146,7 @@ class WpmTst_Widget extends WP_Widget {
 
 		// start HTML output
 
-		$format = '<div class="readmore"><a href="%s">' . _x( 'Read more', 'link text', 'strong-testimonials' ) .'</a></div>';
+		$format = '<div class="readmore"><a href="%s">' . _x( 'Read more', 'link', 'strong-testimonials' ) .'</a></div>';
 
 		echo $data['before_widget'];
 

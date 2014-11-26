@@ -10,7 +10,7 @@
 			<li>&ldquo;<?php _e( 'Some content.', 'strong-testimonials' ); ?>&rdquo;</li>
 			<li><em>...<?php _e( 'an excerpt', 'strong-testimonials' ); ?>...</em></li>
 			<li><div class="dashicons dashicons-format-image"></div> <?php _e( 'a featured image (thumbnail)', 'strong-testimonials' ); ?></li>
-			<li><?php _e( 'custom fields', 'strong-testimonials' ); ?> <span class="help"><?php _e( '(like client name and email)', 'strong-testimonials' ); ?></span></li>
+			<li><?php _e( 'custom fields', 'strong-testimonials' ); ?> <span class="help">(<?php _e( 'like client name and email', 'strong-testimonials' ); ?>)</span></li>
 			<li><?php _e( 'categories', 'strong-testimonials' ); ?></li>
 		</ul>
 		

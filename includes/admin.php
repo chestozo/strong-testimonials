@@ -145,7 +145,7 @@ function wpmtst_edit_columns( $columns ) {
 	
 	$columns = array(
 			'cb'    => '<input type="checkbox" />', 
-			'title' => __( 'Title', 'strong-testimonials' ),
+			'title' => _x( 'Title', 'testimonial', 'strong-testimonials' ),
 			'post_excerpt' => __( 'Excerpt', 'strong-testimonials' ),
 	);
 	
@@ -256,7 +256,7 @@ function wpmtst_manage_categories( $columns ) {
 	$new_columns = array(
 			'cb'        => '<input type="checkbox" />',
 			'ID'        => __( 'ID', 'strong-testimonials' ),
-			'name'      => __( 'Name', 'strong-testimonials' ),
+			'name'      => _x( 'Name', 'noun', 'strong-testimonials' ),
 			'slug'      => __( 'Slug', 'strong-testimonials' ),
 			'shortcode' => __( 'Shortcode', 'strong-testimonials' ),
 			'posts'     => __( 'Posts', 'strong-testimonials' )
