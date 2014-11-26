@@ -535,7 +535,7 @@ class WpmTst_Widget extends WP_Widget {
 				<p>
 					<?php
 					/* translators: This appears in widget settings. */
-					_ex( '"Read more" link', 'display a link', 'strong-testimonials' );
+					_e( '"Read More" link', 'strong-testimonials' );
 					?>
 				</p>
 			

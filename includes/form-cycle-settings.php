@@ -205,7 +205,7 @@
 	<th scope="row">
 		<?php
 		/* translators: This is on the Cycle Shortcode settings screen. */
-		_e( '"Read more" link', 'strong-testimonials' );
+		_e( '"Read More" link', 'strong-testimonials' );
 		?>
 	</th>
 	<td>
