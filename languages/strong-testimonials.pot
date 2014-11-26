@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Strong Testimonials 1.12\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/strong-testimonials\n"
-"POT-Creation-Date: 2014-11-26 14:55:58+00:00\n"
+"POT-Creation-Date: 2014-11-26 15:08:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -430,8 +430,11 @@ msgid "Client Information <em>(if included in Fields)</em>"
 msgstr ""
 
 #. translators: This is on the Cycle Shortcode settings screen.
-#: includes/form-cycle-settings.php:208
-msgid "\"Read more\" link"
+#. translators: This appears in the [strong] shortcode instructions.
+#. translators: This appears in widget settings.
+#: includes/form-cycle-settings.php:208 includes/tabs/readmore.php:6
+#: includes/widget.php:538
+msgid "\"Read More\" link"
 msgstr ""
 
 #. translators: This is on the Cycle Shortcode settings screen.
@@ -1446,11 +1449,6 @@ msgid "select a theme template file"
 msgstr ""
 
 #. translators: This appears in the [strong] shortcode instructions.
-#: includes/tabs/readmore.php:6
-msgid "\"Read More\" link"
-msgstr ""
-
-#. translators: This appears in the [strong] shortcode instructions.
 #: includes/tabs/readmore.php:8
 msgid "must not be inside another [ strong ] shortcode"
 msgstr ""
@@ -1577,12 +1575,6 @@ msgstr ""
 #. translators: This appears in widget settings.
 #: includes/widget.php:518
 msgid "Client Info"
-msgstr ""
-
-#. translators: This appears in widget settings.
-#: includes/widget.php:538
-msgctxt "display a link"
-msgid "\"Read more\" link"
 msgstr ""
 
 #. translators: %s is the name of the plugin.
