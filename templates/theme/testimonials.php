@@ -1,15 +1,13 @@
 <?php
 /**
- * Testimonials Loop Template.
+ * Template Name: Strong Testimonials (theme)
  *
  * For use in themes.
  *
  * @package Strong_Testimonials
  * @since 1.11.0
- */
-
-/**
- * For displaying testimonials using the [strong] shortcode (not a widget).
+ *
+ * For displaying testimonials.
  * Copy this file into your (child) theme directory and modify as needed.
  * 
  * Default:
@@ -26,16 +24,13 @@
  * +----------------------------------------------+
  */
 ?>
-
 <div class="strong-container <?php echo $container_class_list; ?>">
-
 	<div class="strong-content <?php echo $content_class_list; ?>">
 	
 		<?php /* Nested Loop */ ?>
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 		
 		<div class="<?php echo $post_class_list; ?> post-<?php echo the_ID(); ?>">
-
 			<div class="inner">
 
 				<h3 class="heading"><?php the_title(); ?></h3>
@@ -47,9 +42,9 @@
 					<div class="photo"><?php the_post_thumbnail(); ?></div>
 
 					<?php /* Content */ ?>
-					<?php //the_content(); ?>
+					<?php the_content(); ?>
 					<?php //the_excerpt(); ?>
-					<?php wpmtst_field( 'truncated', array( 'char_limit' => 100 ) ); ?>
+					<?php //wpmtst_field( 'truncated', array( 'char_limit' => 100 ) ); ?>
 
 				</div><!-- .content -->
 
@@ -68,14 +63,10 @@
 				</div><!-- .client -->
 				
 				<div class="clear"></div>
-				
 			</div><!-- inner -->
-			
 		</div><!-- testimonial -->
 			
 		<?php endwhile; ?>
 	
 	</div><!-- .strong-content -->
-	
 </div><!-- .strong-container -->
-

@@ -3,10 +3,6 @@
  * Strong Testimonials - Widget functions
  */
 
- 
-/*
- * Widget
- */
 class WpmTst_Widget extends WP_Widget {
 
 	// -----
@@ -16,7 +12,7 @@ class WpmTst_Widget extends WP_Widget {
 
 		$widget_ops = array(
 				'classname'   => 'wpmtst-widget',
-				'description' => _x( 'Strong Testimonials widget.', 'description', 'strong-testimonials' )
+				'description' => _x( 'Strong Testimonials widget. **To be deprecated soon.** Please migrate to the Testimonials Block widget.', 'description', 'strong-testimonials' )
 		);
 
 		$control_ops = array(
@@ -63,16 +59,16 @@ class WpmTst_Widget extends WP_Widget {
 			 *
 			 * @since 1.9.0
 			 */
-			wp_enqueue_style( 'wpmtst-widget-style', WPMTST_DIR . 'css/wpmtst-widget.css' );
+			// wp_enqueue_style( 'wpmtst-widget-style', WPMTST_DIR . 'css/wpmtst-widget.css' );
 			
 			/*
 			 * RTL
 			 *
 			 * @since 1.14.2
 			 */
-			if ( is_rtl() ) {
-				wp_enqueue_style( 'wpmtst-widget-rtl', WPMTST_DIR . 'css/wpmtst-widget-rtl.css' );
-			}
+			// if ( is_rtl() ) {
+				// wp_enqueue_style( 'wpmtst-widget-rtl', WPMTST_DIR . 'css/wpmtst-widget-rtl.css' );
+			// }
 
 		}
 			
@@ -247,6 +243,8 @@ class WpmTst_Widget extends WP_Widget {
 		?>
 		<div class="wpmtst-widget-form">
 
+			<p style="color: red; font-size: 1.2em;"><b>To be deprecated soon.</b><br /> Please migrate to the Testimonials Block widget.</p>
+			
 			<!-- title -->
 			<p>
 				<label class="alpha" for="<?php echo $this->get_field_id( 'title' ); ?>">
@@ -497,7 +495,7 @@ class WpmTst_Widget extends WP_Widget {
 				<span class="widget-help dashicons dashicons-editor-help">
 					<span class="help">
 						<?php
-						/* translators: This appears in widget settings. Refers to your custom fields.*/
+						/* translators: This appears in widget settings. Refers to your custom fields. */
 						_ex( 'if included in Fields', 'tooltip', 'strong-testimonials' );
 						?>
 					</span>
@@ -516,7 +514,7 @@ class WpmTst_Widget extends WP_Widget {
 				<span class="widget-help dashicons dashicons-editor-help">
 					<span class="help">
 						<?php
-						/* translators: This appears in widget settings. Refers to your custom fields.*/
+						/* translators: This appears in widget settings. Refers to your custom fields. */
 						_ex( 'if included in Fields', 'tooltip', 'strong-testimonials' );
 						?>
 						</span>

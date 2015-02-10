@@ -8,7 +8,7 @@
  * @package Strong_Testimonials
  */
 
- 
+
 /*
  * Settings
  */
@@ -227,7 +227,7 @@ $default_messages = array(
 				/* translators: Default label for Captcha field on submission form. */
 				'text'        => _x( 'Captcha', 'strong-testimonials' ),
 		),
-		
+
 		'form-submit-button' => array(
 				'order' => 3,
 				/* translators: Settings > Messages tab > message description */
@@ -235,7 +235,7 @@ $default_messages = array(
 				/* translators: Default label for the Submit button on testimonial form. */
 				'text'        => _x( 'Add Testimonial', 'the Submit button', 'strong-testimonials' ),
 		),
-		
+
 		'submission-error' => array(
 				'order' => 4,
 				/* translators: Settings > Messages tab > message description */
@@ -243,7 +243,7 @@ $default_messages = array(
 				/* translators: Default message for submission form error. */
 				'text'        => _x( 'There was a problem processing your testimonial.', 'error message', 'strong-testimonials' ),
 		),
-		
+
 		'submission-success' => array(
 				'order' => 5,
 				/* translators: Settings > Messages tab > message description */
@@ -274,3 +274,71 @@ $default_form_options = array(
 		'honeypot_after'    => 1,
 		'messages'          => $default_messages,
 );
+
+
+/**
+ * Some default block options.
+ *
+ * @since 1.15.0
+ */
+$default_block_options = array(
+		// ~~~ ADD I18N! ~~~
+		'mode' => array( 
+				'options' => array(
+						array( 'name' => 'display', 'label' => 'Display', 'description' => '', 'help' => ''	),
+						array( 'name' => 'slideshow', 'label' => 'Slideshow', 'description' => '', 'help' => '' ),
+						array( 'name' => 'form', 'label' => 'Form', 'description' => '', 'help' => '' ),
+				)
+		),
+		'order' => array(
+				'options' => array(
+						array( 'name' => 'random', 'label' => 'Random', 'description' => '', 'help' => '' ),
+						array( 'name' => 'newest', 'label' => 'Newest first', 'description' => '', 'help' => '' ),
+						array( 'name' => 'oldest', 'label' => 'Oldest first', 'description' => '', 'help' => '' )
+				)
+		),
+		'content' => array(
+				'options' => array(
+						array( 'name' => 'excerpt', 'label' => 'Excerpt', 'description' => '', 'help' => '' ),
+						array( 'name' => 'length', 'label' => 'Length', 'description' => '', 'help' => '' ),
+						array( 'name' => 'entire', 'label' => 'Entire', 'description' => '', 'help' => '' )
+				)
+		),
+		// [mode] --> [template]
+		// 'default_templates' => array(
+				// 'display'   => 'default/testimonials-page.php',
+				// 'slideshow' => 'default/testimonials-widget.php',
+				// 'form'      => 'default/testimonials-form.php',
+		// ),
+);
+
+$default_block = array(
+		'mode'           => 'display',
+		'category'       => 'all',
+		'class'          => '',
+		'template'       => 'default/testimonials-page.php',
+		'all'            => true,
+		'count'          => 5,
+		'pagination'     => false,
+		'per_page'       => 5,
+		'nav'            => 'after',
+		'id'             => '',
+		'order'          => 'oldest',
+		'title'          => true,
+		'thumbnail'      => true,
+		'thumbnail_size' => 'thumbnail',
+		'content'        => 'entire',
+		'length'         => 200,
+		'more_post'      => false,
+		'more_text'      => 'Read more',
+		'show_for'       => 8,
+		'effect_for'     => 1.5,
+		'no_pause'       => false,
+		'page'           => '',
+		'client_section' => array(
+				0 => array( 'field' => 'client_name', 'type' => 'text', 'class' => 'name' ),
+				1 => array( 'field' => 'company_name', 'type' => 'link', 'url' => 'company_website', 'class' => 'company', 'new_tab' => true )
+		)
+);
+
+ksort( $default_block );

@@ -1,0 +1,23 @@
+/**
+ * Strong Testimonials stylesheet - Paging controls
+ */
+
+ul.simplePagerNav {
+	margin: 1em auto;
+	text-align: center;
+	display: block;
+}
+
+ul.simplePagerNav li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0 .3em;
+}
+
+ul.simplePagerNav li a {
+}
+
+ul.simplePagerNav li.currentPage a {
+	text-decoration: none;	
+}

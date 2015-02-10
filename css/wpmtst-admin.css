@@ -345,8 +345,8 @@ ul.ui-tabs-nav li.ui-tabs-active a {
 	color: #888;
 }
 
-#screenshot-screen-options {
-	display: none;
+.screenshot {
+	margin-top: 10px;
 }
 
 .screenshot > div {
@@ -358,13 +358,15 @@ ul.ui-tabs-nav li.ui-tabs-active a {
 
 div.radio {
 	line-height: 1.5em;
+	padding: 5px 0;
 }
 
 div.radio:hover {
 	color: #000;
 }
 
-/* form table */
+/* Form table
+---------------------------------------------------------*/
 
 .wpmtst .form-table {
 	border-collapse: separate;
@@ -373,19 +375,19 @@ div.radio:hover {
 	vertical-align: middle;
 }
 
-.wpmtst .form-table th,
-.wpmtst .form-table td {
+.wpmtst .form-table tr th,
+.wpmtst .form-table tr td {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #ddd;
 	padding: 10px 0;
 }
 
-.wpmtst .form-table tr:first-child th,
-.wpmtst .form-table tr:first-child td {
+.wpmtst .form-table > tr:first-child th,
+.wpmtst .form-table > tr:first-child td {
 	border-top: 1px solid #FFF;
 }
 
-.wpmtst .form-table td:nth-child(1) {
+.wpmtst .form-table > tr td:nth-child(1) {
 	width: 200px;
 }
 
@@ -402,13 +404,18 @@ div.radio:hover {
 }
 
 .wpmtst .form-table p {
-	margin-bottom: 1em;
+	/* margin-bottom: 0.5em; */
 }
 
 .wpmtst .form-table input,
 .wpmtst .form-table select,
 .wpmtst .form-table textarea {
 	line-height: 1.5em;
+}
+
+.wpmtst .form-table input[type="button"] {
+	line-height: 26px;
+	height: 28px;
 }
 
 .wpmtst select {
@@ -430,7 +437,10 @@ div.radio:hover {
 }
 
 .wpmtst .form-table .alpha {
-	width: 120px;
+	width: 140px;
+}
+.wpmtst .form-table .alpha.alpha-110 {
+	width: 110px;
 }
 
 .wpmtst .form-table .alpha + div {
@@ -489,6 +499,7 @@ div.radio:hover {
 }
 
 /* end: form-table */
+
 
 .code {
 	background: #fff;
@@ -587,6 +598,19 @@ ul.compact li {
   color: blue;
 }
 
+
+/* Descriptions
+-----------------------------------------------*/
+
+.form-table th p.description, 
+.form-table td p.description {
+	font-size: 14px;
+}
+
+.description.inline {
+	display: inline-block;
+}
+
 .description a {
 	text-decoration: underline;
 }
@@ -595,12 +619,16 @@ ul.compact li {
 	text-decoration: none;
 }
 
-.radio .description {
-	padding-left: 20px;
+.radio p.description {
+	padding-left: 24px;
 }
 
-.checkbox .description {
-	padding-left: 24px;
+.checkbox p.description {
+	padding-left: 28px;
+}
+
+.input p.description {
+	display: inline-block;
 }
 
 ul.description {
@@ -815,3 +843,13 @@ input[readonly] {
 .has-divs div.input-email-subject {
 	margin-bottom: 15px;
 }
+
+
+.wrap.wpmtst th:hover {
+	cursor: default;
+}
+.wrap.wpmtst select:hover {
+	cursor: pointer;
+}
+
+

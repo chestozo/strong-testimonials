@@ -25,6 +25,13 @@ function wpmtst_settings_menu() {
 										'wpmtst_settings_custom_fields' );
 
 	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
+										__( 'Blocks', 'strong-testimonials' ),
+										__( 'Blocks', 'strong-testimonials' ),
+										'manage_options',
+										'blocks',
+										'wpmtst_settings_blocks' );
+										
+	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
 										__( 'Shortcodes', 'strong-testimonials' ),
 										__( 'Shortcodes', 'strong-testimonials' ),
 										'manage_options',
@@ -33,8 +40,7 @@ function wpmtst_settings_menu() {
 
 	add_submenu_page( 'edit.php?post_type=wpm-testimonial',
 										_x( 'Guide', 'noun', 'strong-testimonials' ),
-										/* translators: %s is an icon. */
-										sprintf( _x ('%s Guide', 'noun', 'strong-testimonials' ), '<div class="dashicons dashicons-info"></div>' ),
+										_x ('Guide', 'noun', 'strong-testimonials' ),
 										'manage_options',
 										'guide',
 										'wpmtst_guide' );
@@ -81,9 +87,10 @@ add_action( 'admin_menu', 'wpmtst_unique_menu_title', 100 );
  * Register settings
  */
 function wpmtst_register_settings() {
-	register_setting( 'wpmtst-settings-group', 'wpmtst_options',      'wpmtst_sanitize_options' );
-	register_setting( 'wpmtst-cycle-group',    'wpmtst_cycle',        'wpmtst_sanitize_cycle' );
-	register_setting( 'wpmtst-form-group',     'wpmtst_form_options', 'wpmtst_sanitize_form' );
+	// register_setting( $option_group, $option_name, $sanitize_callback );
+	register_setting( 'wpmtst-settings-group', 'wpmtst_options',       'wpmtst_sanitize_options' );
+	register_setting( 'wpmtst-cycle-group',    'wpmtst_cycle',         'wpmtst_sanitize_cycle' );
+	register_setting( 'wpmtst-form-group',     'wpmtst_form_options',  'wpmtst_sanitize_form' );
 }
 
 
@@ -334,7 +341,7 @@ function wpmtst_form_settings() {
 		
 	}
 
-	include( WPMTST_INC . 'form-form.php' );
+	include( WPMTST_INC . 'form-form-settings.php' );
 }
 
 

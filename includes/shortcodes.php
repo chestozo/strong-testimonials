@@ -50,13 +50,25 @@ function wpmtst_single( $post, $args = array() ) {
 
 
 /**
- * Template functions (partial).
+ * Echo custom field.
  *
  * @since 1.11.0
  */
 function wpmtst_field( $field = null, $args = array() ) {
-	if ( ! $field ) return '';
-		
+	echo wpmtst_get_field( $field, $args );
+}
+
+/**
+ * Fetch custom field.
+ *
+ * Thanks to Matthew Harris.
+ * @link https://github.com/cdillon/strong-testimonials/issues/2
+ * @since 1.15.0
+ */
+function wpmtst_get_field( $field, $args = array() ) {	
+	if ( ! $field )
+		return '';
+	
 	global $post;
 	$html = '';
 	
@@ -77,7 +89,7 @@ function wpmtst_field( $field = null, $args = array() ) {
 			$html = get_post_meta( $post->ID, $field, true );
 			
 	}
-	echo $html;
+	return $html;
 }
 
 
@@ -402,7 +414,7 @@ function wpmtst_pagination_function() {
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$("#wpmtst-container").quickPager({ pageSize: <?php echo $per_page; ?>, currentPage: 1, pagerLocation: "after" });
-			$(".strong-container").quickPager({ pageSize: <?php echo $per_page; ?>, currentPage: 1, pagerLocation: "after" });
+			// $(".strong-container").quickPager({ pageSize: <?php echo $per_page; ?>, currentPage: 1, pagerLocation: "after" });
 		});
 	</script>
 	<?php
@@ -432,45 +444,33 @@ function wpmtst_notify_admin( $post ) {
 
 	$admin_name = $options['admin_name'];
 
+	$to = sprintf( '%s <%s>', $admin_name, $admin_email );
 
-	if ( $options['admin_notify'] ) {
-		
-		$to = sprintf( '%s <%s>', $admin_name, $admin_email );
-	
-		// Default subject and message moved to includes/defaults.php.
-		
-		// str_replace( search, replace, subject )
-		
-		// Subject line
-		$subject = $options['email_subject'];
-		$subject = str_replace( '%BLOGNAME%', get_bloginfo( 'name' ), $subject );
-		$subject = str_replace( '%TITLE%', $post['post_title'], $subject );
-		$subject = str_replace( '%STATUS%', $post['post_status'], $subject );
-		// custom fields
-		foreach ( $fields as $field ) {
-			$field_as_tag = '%' . strtoupper( $field['name'] ). '%';
-			$subject = str_replace( $field_as_tag, $post[$field['name']], $subject );
-		}
-		
-		// Message text
-		$message = $options['email_message'];
-		$message = str_replace( '%BLOGNAME%', get_bloginfo( 'name' ), $message );
-		$message = str_replace( '%TITLE%', $post['post_title'], $message );
-		$message = str_replace( '%CONTENT%', $post['post_content'], $message );
-		$message = str_replace( '%STATUS%', $post['post_status'], $message );
-		// custom fields
-		foreach ( $fields as $field ) {
-			$field_as_tag = '%' . strtoupper( $field['name'] ). '%';
-			$message = str_replace( $field_as_tag, $post[$field['name']], $message );
-		}
-
-		$headers = sprintf( 'From: %s <%s>', $sender_name, $sender_email );
-		
-		/* translators: Message for new testimonial notification email. */
-		
-		// @TODO More info here? A copy of testimonial? A link to admin page? A link to approve directly from email?
-		
-		@wp_mail( $to, $subject, $message, $headers );
-	
+	// Subject line
+	$subject = $options['email_subject'];
+	$subject = str_replace( '%BLOGNAME%', get_bloginfo( 'name' ), $subject );
+	$subject = str_replace( '%TITLE%', $post['post_title'], $subject );
+	$subject = str_replace( '%STATUS%', $post['post_status'], $subject );
+	// custom fields
+	foreach ( $fields as $field ) {
+		$field_as_tag = '%' . strtoupper( $field['name'] ). '%';
+		$subject = str_replace( $field_as_tag, $post[$field['name']], $subject );
 	}
+	
+	// Message text
+	$message = $options['email_message'];
+	$message = str_replace( '%BLOGNAME%', get_bloginfo( 'name' ), $message );
+	$message = str_replace( '%TITLE%', $post['post_title'], $message );
+	$message = str_replace( '%CONTENT%', $post['post_content'], $message );
+	$message = str_replace( '%STATUS%', $post['post_status'], $message );
+	// custom fields
+	foreach ( $fields as $field ) {
+		$field_as_tag = '%' . strtoupper( $field['name'] ). '%';
+		$message = str_replace( $field_as_tag, $post[$field['name']], $message );
+	}
+
+	$headers = sprintf( 'From: %s <%s>', $sender_name, $sender_email );
+	// @TODO More info here? A copy of testimonial? A link to admin page? A link to approve directly from email?
+	
+	@wp_mail( $to, $subject, $message, $headers );
 }

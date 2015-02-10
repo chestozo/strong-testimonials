@@ -2,7 +2,6 @@
  * Strong Testimonials stylesheet
  */
 
-
 /* Testimonial pages
 ---------------------------------------------------------*/
 
@@ -97,28 +96,4 @@ use .strong-container instead
 
 .readmore {
 	margin-top: 1em;
-}
-
-
-/* Paging Controls 
----------------------------------------------------------*/
-
-ul.simplePagerNav {
-	margin: 1em auto;
-	text-align: center;
-	display: block;
-}
-
-ul.simplePagerNav li {
-	display: inline;
-	list-style: none;
-	margin: 0;
-	padding: 0 .3em;
-}
-
-ul.simplePagerNav li a {
-}
-
-ul.simplePagerNav li.currentPage a {
-	text-decoration: none;	
 }

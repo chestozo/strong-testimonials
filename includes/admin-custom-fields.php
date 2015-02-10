@@ -1,6 +1,9 @@
 <?php
 /**
- * Strong Testimonials - Custom fields admin functions
+ * Custom fields admin
+ * 
+ * @since 1.7.0
+ * @package Strong_Testimonials
  */
 
  
@@ -94,11 +97,11 @@ function wpmtst_settings_custom_fields() {
 	echo '<li>' . sprintf( __( 'Sort by grabbing the %s icon.', 'strong-testimonials' ), '<span class="dashicons dashicons-menu"></span>' ) . '</li>';
 	echo '<li>' . __( 'Click the field name to expand its options panel.', 'strong-testimonials' ) . '</li>' . "\n";
 	echo '<li>' . "\n";
-	echo '<a href="http://www.wpmission.com/tutorials/customize-the-form-in-strong-testimonials/" target="_blank">' . _x( 'Full tutorial', 'link', 'strong-testimonials' ) .'</a>';
+	echo '<a href="//www.wpmission.com/tutorials/customize-the-form-in-strong-testimonials/" target="_blank">' . _x( 'Full tutorial', 'link', 'strong-testimonials' ) .'</a>';
 	echo ' | ' . "\n";
-	echo '<a href="http://wordpress.org/support/plugin/strong-testimonials" target="_blank">' . _x( 'Plugin support', 'link', 'strong-testimonials' ) . '</a>';
+	echo '<a href="//wordpress.org/support/plugin/strong-testimonials" target="_blank">' . _x( 'Plugin support', 'link', 'strong-testimonials' ) . '</a>';
 	echo ' | ' . "\n";
-	echo '<a href="http://www.wpmission.com/contact/" target="_blank">' . _x( 'Developer', 'contact link', 'strong-testimonials' ) . '</a>' . "\n";
+	echo '<a href="//www.wpmission.com/contact/" target="_blank">' . _x( 'Developer', 'contact link', 'strong-testimonials' ) . '</a>' . "\n";
 	echo '</li>' . "\n";
 	echo '</ul>' . "\n";
 	
@@ -115,7 +118,7 @@ function wpmtst_settings_custom_fields() {
 	echo '</ul>' . "\n";
 	
 	echo '<div id="add-field-bar">';
-	echo '<input id="add-field" type="button" class="button-primary" name="add-field" value="' . __( 'Add New Field', 'strong-testimonials' ) . '" />';
+	echo '<input id="add-field" type="button" class="button" name="add-field" value="' . __( 'Add New Field', 'strong-testimonials' ) . '" />';
 	echo '</div>' . "\n";
 	
 	echo '<p class="submit">' . "\n";

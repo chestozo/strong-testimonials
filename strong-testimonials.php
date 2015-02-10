@@ -4,7 +4,7 @@
  * Plugin URI: http://www.wpmission.com/plugins/strong-testimonials/
  * Description: A powerful testimonial manager.
  * Author: Chris Dillon
- * Version: 1.14.5
+ * Version: 1.16
  * Forked From: GC Testimonials version 1.3.2 by Erin Garscadden
  * Author URI: http://www.wpmission.com/contact
  * Text Domain: strong-testimonials
@@ -35,7 +35,11 @@
  */
 define( 'WPMTST_DIR', plugin_dir_url( __FILE__ ) );
 define( 'WPMTST_INC', plugin_dir_path( __FILE__ ) . 'includes/' );
-define( 'WPMTST_TPL', plugin_dir_path( __FILE__ ) . 'templates/' );
+define( 'WPMTST_TPL', plugin_dir_path( __FILE__ ) . 'templates/plugin/' );
+define( 'WPMTST_TPL_URI', plugin_dir_url( __FILE__ ) . 'templates/plugin/' );
+
+global $strong_testimonials_db_version;
+$strong_testimonials_db_version = '1.0';
 
 
 /**
@@ -64,6 +68,8 @@ add_action( 'plugins_loaded', 'wpmtst_textdomain' );
 /**
  * Plugin activation
  */
+register_activation_hook( __FILE__, 'wpmtst_update_tables' );
+// register_activation_hook( __FILE__, 'wpmtst_add_data' );
 register_activation_hook( __FILE__, 'wpmtst_register_cpt' );
 register_activation_hook( __FILE__, 'wpmtst_flush_rewrite_rules' );
 register_deactivation_hook( __FILE__, 'wpmtst_flush_rewrite_rules' );
@@ -71,6 +77,106 @@ register_deactivation_hook( __FILE__, 'wpmtst_flush_rewrite_rules' );
 function wpmtst_flush_rewrite_rules() {
 	flush_rewrite_rules();
 }
+
+
+/**
+ * Add tables for Blocks.
+ *
+ * @since 1.15.0
+ */
+function wpmtst_update_tables() {
+	global $wpdb;
+	global $strong_testimonials_db_version;
+	
+	$charset_collate = $wpdb->get_charset_collate();
+	
+	$table_name = $wpdb->prefix . 'strong_blocks';
+	
+	$sql = "CREATE TABLE $table_name (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		name varchar(100) NOT NULL,
+		value text NOT NULL,
+		UNIQUE KEY id (id)
+	) $charset_collate;";
+
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	dbDelta( $sql );
+	
+	add_option( "strong_testimonials_db_version", $strong_testimonials_db_version );
+}
+
+
+/**
+ * Default Blocks.
+ *
+ * @since 1.15.0
+ */
+function wpmtst_add_data() {
+	global $wpdb;
+	
+	$defaults = array(
+			'mode'           => 'display',
+			'category'       => 'all',
+			'class'          => '',
+			'template'       => 'default/testimonials-page.php',
+			'all'            => true,
+			'count'          => 5,
+			'pagination'     => false,
+			'per_page'       => 5,
+			'nav'            => 'after',
+			'id'             => '',
+			'order'          => 'oldest',
+			'title'          => true,
+			'thumbnail'      => true,
+			'thumbnail_size' => 'thumbnail',
+			'content'        => 'entire',
+			'length'         => 200,
+			'more_post'      => false,
+			'more_text'      => 'Read more',
+			'show_for'       => 8,
+			'effect_for'     => 1.5,
+			'no_pause'       => false,
+			'page'           => '',
+			'client_section' => array(
+					0 => array( 'field' => 'client_name', 'type' => 'text', 'class' => 'name' ),
+					1 => array( 'field' => 'company_name', 'type' => 'link', 'url' => 'company_website', 'class' => 'company', 'new_tab' => true )
+			)
+	);
+
+	ksort( $defaults );
+	
+	$serialized = serialize( $defaults );
+
+	$table_name = $wpdb->prefix . 'strong_blocks';
+	
+	// The unmutable defaults.
+	// Insert or update, 
+	// thanks s_ha_dum http://wordpress.stackexchange.com/a/145112/32076
+	$sql = "INSERT INTO {$table_name} (name, value) VALUES (%s, %s) ON DUPLICATE KEY UPDATE value = %s";
+	$sql = $wpdb->prepare( $sql, '_default', $serialized, $serialized );
+	$wpdb->query( $sql );
+	
+	// The base for new blocks.
+	if ( ! wpmtst_get_block( 'base' ) ) {
+		$sql = "INSERT INTO {$table_name} (name, value) VALUES (%s, %s)";
+		$sql = $wpdb->prepare( $sql, 'Base', $serialized );
+		$wpdb->query( $sql );
+	}
+}
+
+
+/**
+ * Update tables.
+ *
+ * @since 1.15.0
+ */
+function wpmtst_update_db_check() {
+	global $strong_testimonials_db_version;
+	if ( get_site_option( 'strong_testimonials_db_version' ) != $strong_testimonials_db_version ) {
+		wpmtst_update_tables();
+	}
+}
+add_action( 'plugins_loaded', 'wpmtst_update_db_check' );
 
 
 /**
@@ -182,6 +288,17 @@ add_action( 'after_theme_setup', 'wpmtst_theme_support' );
 
 
 /**
+ * Add widget thumbnail size.
+ * 
+ * @since 1.15.0
+ */
+function wpmtst_add_image_sizes() {
+	add_image_size( 'widget-thumbnail', 75, 75, false );
+}
+add_action( 'after_setup_theme', 'wpmtst_add_image_sizes' );
+
+
+/**
  * Register scripts and styles.
  */
 function wpmtst_scripts() {
@@ -189,24 +306,51 @@ function wpmtst_scripts() {
 	$options = get_option( 'wpmtst_options' );
 	$form_options = get_option( 'wpmtst_form_options' );
 
-	/*
-	 * To be compatible with Page Builder plugin, widget styles and scripts
-	 * are enqueued later when widget is active using custom action hook 
-	 * `wpmtst_cycle_hook` and `wpmtst_is_registered` function.
-	 *
-	 * @since 1.9.0
-	 */
-	 
 	wp_register_style( 'wpmtst-style', WPMTST_DIR . 'css/wpmtst.css' );
-	wp_register_style( 'wpmtst-form-style', WPMTST_DIR . 'css/wpmtst-form.css' );
-	wp_register_style( 'wpmtst-rtl-style', WPMTST_DIR . 'css/wpmtst-rtl.css' );
+	// wp_register_style( 'strong-page-style', WPMTST_DIR . 'css/strong-page.css' );
 	
+	wp_register_style( 'wpmtst-form-style', WPMTST_DIR . 'css/wpmtst-form.css' );
+	
+	wp_register_style( 'wpmtst-pagination-style', WPMTST_DIR . 'css/wpmtst-pagination.css' );
+	
+	wp_register_style( 'wpmtst-rtl-style', WPMTST_DIR . 'css/wpmtst-rtl.css' );
+
 	wp_register_script( 'wpmtst-pager-plugin', WPMTST_DIR . 'js/quickpager.jquery.js', array( 'jquery' ) );
+	wp_register_script( 'wpmtst-pager-script', WPMTST_DIR . 'js/wpmtst-pager.js', array( 'wpmtst-pager-plugin' ) );
 	wp_register_script( 'wpmtst-validation-plugin', WPMTST_DIR . 'js/jquery.validate.min.js', array( 'jquery' ) );
 	
-	// Check for shortcodes. Keep these exploded!
+	/**
+	 * Check for shortcodes. Keep these exploded!
+	 */
 	if ( $post ) {
+		
+		/**
+		 * Load stylesheets here so themes can easily override styles.
+		 * 
+		 * @since 1.15.0
+		 */
+			
+		// ~1.16
+		// if ( $strong_template = wpmtst_get_template( $post->post_content ) )	{
+			// logmore($strong_template,'strong_template','sep');
+			// if ( $strong_template['css'] )
+				// wp_enqueue_style( 'strong-template', $strong_template['css'] );
+		// }
 
+		
+		if ( has_shortcode( $post->post_content, 'strong' ) ) {
+			if ( $options['load_page_style'] ) {
+				wp_enqueue_style( 'wpmtst-style' );
+			}
+			
+			if ( is_rtl() && $options['load_rtl_style'] )
+				wp_enqueue_style( 'wpmtst-rtl-style' );
+		}
+
+		/**
+		 * Original shortcodes
+		 */
+		
 		if ( has_shortcode( $post->post_content, 'wpmtst-all' ) ) {
 			if ( $options['load_page_style'] )
 				wp_enqueue_style( 'wpmtst-style' );
@@ -214,8 +358,9 @@ function wpmtst_scripts() {
 			if ( is_rtl() && $options['load_rtl_style'] )
 				wp_enqueue_style( 'wpmtst-rtl-style' );
 			
-			wp_enqueue_script( 'wpmtst-pager-plugin' );
-			add_action( 'wp_footer', 'wpmtst_pagination_function' );
+			wp_enqueue_style( 'wpmtst-pagination-style' );  // style
+			wp_enqueue_script( 'wpmtst-pager-plugin' );  // plugin
+			add_action( 'wp_footer', 'wpmtst_pagination_function' ); // script
 		}
 
 		if ( has_shortcode( $post->post_content, 'wpmtst-form' ) ) {
@@ -264,6 +409,41 @@ function wpmtst_scripts() {
 		}
 	
 	}
+	
+	/**
+	 * Widgets
+	 *
+	 * Previously deferred to footer.
+	 * Loading here so themes can easily override styles.
+	 * Monitor for compatibility with page builder plugins.
+	 *
+	 * @since 1.15.0
+	 */
+	if ( is_active_widget( false, false, 'wpmtst-widget', true ) ) {
+		if ( $options['load_widget_style'] ) {
+			wp_enqueue_style( 'wpmtst-widget-style', WPMTST_DIR . 'css/wpmtst-widget.css' );
+			if ( is_rtl() && $options['load_rtl_style'] ) {
+				wp_enqueue_style( 'wpmtst-widget-rtl', WPMTST_DIR . 'css/wpmtst-widget-rtl.css' );
+			}	
+		}
+	}
+	
+	if ( is_active_widget( false, false, 'strong_testimonials-widget', true ) ) {
+		if ( $options['load_widget_style'] ) {
+			wp_enqueue_style( 'strong-widget-style', WPMTST_DIR . 'css/strong-widget.css' );
+			if ( is_rtl() && $options['load_rtl_style'] ) {
+				wp_enqueue_style( 'wpmtst-widget-rtl', WPMTST_DIR . 'css/wpmtst-widget-rtl.css' );
+			}	
+		}
+	}
+	
+	/**
+	 * To be compatible with Page Builder plugin, widget scripts
+	 * are enqueued later when widget is active using custom action hook 
+	 * `wpmtst_cycle_hook` and `wpmtst_is_registered` function.
+	 *
+	 * @since 1.9.0
+	 */
 }
 add_action( 'wp_enqueue_scripts', 'wpmtst_scripts' );
 
@@ -279,11 +459,12 @@ add_action( 'wp_enqueue_scripts', 'wpmtst_scripts' );
 function wpmtst_scripts_after_theme() {
 	global $post;
 	$options      = get_option( 'wpmtst_options' );
-	$form_options = get_option( 'wpmtst_form_options' );
+	// $form_options = get_option( 'wpmtst_form_options' );
 
 	// jQuery Cycle plugin (all flavors)
 	$filenames = array( 'jquery.cycle.all.min.js', 'jquery.cycle.all.js', 'jquery.cycle2.min.js', 'jquery.cycle2.js' );
 	$cycle_handle = wpmtst_is_registered( $filenames );
+	// use ours
 	if ( ! $cycle_handle ) {
 		$cycle_handle = 'jquery-cycle';
 		wp_register_script( $cycle_handle, WPMTST_DIR . 'js/jquery.cycle2.min.js', array( 'jquery' ) );
@@ -320,11 +501,15 @@ include( WPMTST_INC . 'functions.php' );
 include( WPMTST_INC . 'child-shortcodes.php' );
 include( WPMTST_INC . 'shims.php' );
 include( WPMTST_INC . 'widget.php' );
+include( WPMTST_INC . 'widget2.php' );
 if ( is_admin() ) {
 	include( WPMTST_INC . 'upgrade.php' );
 	include( WPMTST_INC . 'admin.php' );
-	include( WPMTST_INC . 'admin-custom-fields.php' );
 	include( WPMTST_INC . 'settings.php' );
+	include( WPMTST_INC . 'admin-blocks.php' );
+	include( WPMTST_INC . 'admin-block.php' );
+	include( WPMTST_INC . 'prg-block.php' );
+	include( WPMTST_INC . 'admin-custom-fields.php' );
 	include( WPMTST_INC . 'guide.php' );
 }
 else {

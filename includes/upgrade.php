@@ -24,8 +24,7 @@ function wpmtst_default_settings() {
 	else {
 		// -2B- UPDATE
 		if ( ! isset( $options['plugin_version'] )
-					|| $options['plugin_version'] != $plugin_version 
-					|| 'strong.dev' == $_SERVER['SERVER_NAME'] ) {
+					|| $options['plugin_version'] != $plugin_version ) {
 
 			// Fix captcha inconsistency
 			if ( isset( $options['captcha'] ) && 'none' == $options['captcha'] )
@@ -109,7 +108,7 @@ function wpmtst_default_settings() {
 	/*
 	 * -5- GET FORM OPTIONS
 	 *
-	 * @since 1.13
+	 * @since 1.13.0
 	 */
 	$form_options = get_option( 'wpmtst_form_options' );
 	if ( ! $form_options ) {
@@ -137,8 +136,7 @@ function wpmtst_default_settings() {
 	else {
 		// -5C- UPDATE
 		if ( ! isset( $options['plugin_version'] )
-					|| $options['plugin_version'] != $plugin_version 
-					|| 'strong.dev' == $_SERVER['SERVER_NAME'] ) {
+					|| $options['plugin_version'] != $plugin_version ) {
 
 			// Merge in new options
 			$form_options = array_merge( $default_form_options, $form_options );
@@ -146,4 +144,29 @@ function wpmtst_default_settings() {
 		}
 	}
 	
+	/*
+	 * -6- GET BLOCK OPTIONS
+	 *
+	 * @since 1.15.0
+	 */
+	// -6- GET BLOCKS
+	$block_options = get_option( 'wpmtst_block_options' );
+	$block_default = get_option( 'wpmtst_block_default' );
+	if ( ! $block_options ) {
+		// -6A- NEW ACTIVATION
+		update_option( 'wpmtst_block_options', $default_block_options );
+		update_option( 'wpmtst_block_default', $default_block );
+	}
+	else {
+		// -6B- UPDATE
+		if ( ! isset( $options['plugin_version'] )
+					|| $options['plugin_version'] != $plugin_version ) {
+
+			// Merge in new options
+			$block_options = array_merge( $default_block_options, $block_options );
+			update_option( 'wpmtst_block_options', $block_options );
+			$block_default = array_merge( $default_block, $block_default );
+			update_option( 'wpmtst_block_default', $block_default );
+		}
+	}
 }

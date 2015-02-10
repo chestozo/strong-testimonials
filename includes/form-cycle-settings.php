@@ -104,7 +104,7 @@
 		<input type="checkbox" id="cycle-title" name="wpmtst_cycle[title]" <?php checked( $cycle['title'] ); ?> class="checkbox" />
 		<label for="cycle-title">
 			<?php
-			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields.*/
+			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields. */
 			_ex( 'Title <em>(if included in Fields)</em>', 'the testimonial title', 'strong-testimonials' );
 			?>
 			</label>
@@ -134,7 +134,7 @@
 					/* translators: This is on the Cycle Shortcode settings screen. */
 					_e( 'You may need to enable them in the post editor like in this <a id="toggle-screen-options" href="#">screenshot</a>.', 'strong-testimonials' );
 					?>
-					<div class="screenshot" id="screenshot-screen-options">
+					<div class="screenshot" id="screenshot-screen-options" style="display: none;">
 						<div style="background: url(<?php echo WPMTST_DIR; ?>/images/screen-options.png); height: 241px; width: 730px;"></div>
 					</div>
 				</p>
@@ -179,7 +179,7 @@
 		<input type="checkbox" id="cycle-images" name="wpmtst_cycle[images]" <?php checked( $cycle['images'] ); ?> class="checkbox" />
 		<label for="cycle-images">
 			<?php
-			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields.*/
+			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields. */
 			_e( 'Featured Images <em>(if included in Fields)</em>', 'strong-testimonials' );
 			?>
 		</label>
@@ -194,7 +194,7 @@
 		<input type="checkbox" id="cycle-client" name="wpmtst_cycle[client]" <?php checked( $cycle['client'] ); ?> class="checkbox" />
 		<label for="cycle-client">
 			<?php
-			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields.*/
+			/* translators: This is on the Cycle Shortcode settings screen. Refers to your custom fields. */
 			_e( 'Client Information <em>(if included in Fields)</em>', 'strong-testimonials' );
 			?>
 		</label>

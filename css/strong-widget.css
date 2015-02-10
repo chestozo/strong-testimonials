@@ -1,0 +1,71 @@
+/**
+ * Strong Testimonials stylesheet - Widget
+ */
+
+.clear {
+	clear: both;
+}
+
+/* container for content and pagination */
+.strong-container.widget {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+}
+
+/* container for posts */
+.strong-container.widget .content {
+}
+
+.strong-container.widget .testimonial {
+	margin-bottom: 1.5em;
+}
+
+.strong-container.widget .testimonial .inner {
+}
+
+.strong-container.widget .testimonial .heading {
+}
+
+.strong-container.widget .testimonial h5 {
+	line-height: 1.5;
+}
+
+.strong-container.widget .testimonial .photo {
+	float: left;
+	margin-top: .5em;
+	margin-right: 1em;
+}
+
+.strong-container.widget .testimonial .content {
+	background: transparent;
+	float: none;
+	height: auto;
+	width: auto;
+}
+
+.strong-container.widget .testimonial .client {
+	line-height: 1.5;
+	clear: both;
+}
+
+.strong-container.widget .testimonial .name {
+	font-weight: bold;
+}
+
+.strong-container.widget .readmore {
+	margin-top: 1em;
+}
+
+/*
+ * Next two rules may prevent stacking slides on slow-loading pages
+ */
+/*
+.strong-container .t-slide {
+  display: none;
+}
+
+.strong-container .t-slide:first-child {
+  display: block;
+}
+*/
